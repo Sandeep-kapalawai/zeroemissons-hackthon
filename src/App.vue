@@ -289,28 +289,48 @@
                   ></a>
                   <ul class="submenu">
                     <li>
-                      <a href="javascript:void(0);" class="waves-effect">
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-GTI-QC"
+                      >
                         <span class="waves-effect">
                           QC
                           <span class="float-right menu-arrow"></span> </span
                       ></a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);" class="waves-effect">
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-GTI-RMGC"
+                      >
                         <span class="waves-effect">
                           RMGC
                           <span class="float-right menu-arrow"></span> </span
                       ></a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);" class="waves-effect">
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-GTI-RTG"
+                      >
                         <span class="waves-effect">
                           RTG
                           <span class="float-right menu-arrow"></span> </span
                       ></a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);" class="waves-effect">
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-GTI-TT"
+                      >
                         <span class="waves-effect">
                           TT
                           <span class="float-right menu-arrow"></span> </span
@@ -326,14 +346,24 @@
                   ></a>
                   <ul class="submenu">
                     <li>
-                      <a href="javascript:void(0);" class="waves-effect">
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-P400-QC"
+                      >
                         <span class="waves-effect">
                           QC
                           <span class="float-right menu-arrow"></span> </span
                       ></a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);" class="waves-effect">
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-P400-SC"
+                      >
                         <span class="waves-effect">
                           SC
                           <span class="float-right menu-arrow"></span> </span
@@ -349,21 +379,36 @@
                   ></a>
                   <ul class="submenu">
                     <li>
-                      <a href="javascript:void(0);" class="waves-effect">
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-SLL-QC"
+                      >
                         <span class="waves-effect">
                           QC
                           <span class="float-right menu-arrow"></span> </span
                       ></a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);" class="waves-effect">
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-SLL-RTG"
+                      >
                         <span class="waves-effect">
                           RTG
                           <span class="float-right menu-arrow"></span> </span
                       ></a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);" class="waves-effect">
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-SLL-TT"
+                      >
                         <span class="waves-effect">
                           TT
                           <span class="float-right menu-arrow"></span> </span
@@ -641,8 +686,12 @@
     <!-- ============================================================== -->
     <!-- Start right Content here -->
     <!-- ============================================================== -->
-    <Dashboard :msg="selected" />
-
+    <Dashboard :msg="selected" v-if="selected === ''" />
+    <Dashboard :msg="selected" v-if="selected === 'TERMINAL-GTI-QC'" />
+    <DashboardTerminalRMGC
+      :msg="selected"
+      v-if="selected === 'TERMINAL-GTI-RMGC'"
+    />
     <!-- ============================================================== -->
     <!-- End Right content here -->
     <!-- ============================================================== -->
@@ -652,10 +701,11 @@
 
 <script>
   import Dashboard from "./Dashboard.vue";
-
+  import DashboardTerminalRMGC from "./Dashboard.vue";
   export default {
     components: {
       Dashboard,
+      DashboardTerminalRMGC,
     },
     data() {
       return {
@@ -664,9 +714,17 @@
     },
     methods: {
       selectedItem(name) {
-        console.log(name.target.innerText, "name");
-        this.selected = name.target.innerText;
+        this.selected = "";
+        console.log(name, "name");
+        console.log(name.target, "name");
+        this.selected = name.target.ariaLabel;
         console.log(this.selected, "data");
+      },
+      computed: {
+        renderDashboard(type) {
+          console.log(type);
+          return true;
+        },
       },
     },
   };
