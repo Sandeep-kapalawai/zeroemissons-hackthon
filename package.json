@@ -2,14 +2,26 @@
   "name": "vuetemplate",
   "version": "0.1.0",
   "private": true,
+  "resolve": {
+    "alias": {
+      "vue$": "vue/dist/vue.common.js",
+      "jquery": "jquery/src/jquery.js"
+    }
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start:dev": "vue-cli-service build --mode=development"
   },
   "dependencies": {
+    "apexcharts": "^3.36.0",
     "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "vue-apexcharts": "^1.6.2",
+    "vue-morris": "^1.1.0",
+    "vue-svg-map": "^1.2.0",
+    "vue3-apexcharts": "^1.4.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.15",
