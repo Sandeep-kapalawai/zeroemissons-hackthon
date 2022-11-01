@@ -32,7 +32,7 @@
                 <div>
                   <h5 class="font-16">Average Yearly Consumption</h5>
                 </div>
-                <h3 class="mt-4">43,225</h3>
+                <h3 class="mt-4">43,227</h3>
                 <div class="progress mt-4" style="height: 4px">
                   <div
                     class="progress-bar bg-primary"
