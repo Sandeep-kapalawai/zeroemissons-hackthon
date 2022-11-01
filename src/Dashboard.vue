@@ -491,7 +491,7 @@
             </div>
           </div>
         </div>
-
+        <!-- 
         <apexcharts
           width="500"
           height="350"
@@ -525,7 +525,7 @@
           :options="chartOptionsrange"
           :series="series"
         ></apexcharts>
-        <h1>test</h1>
+        <h1>test</h1> -->
 
         <!-- END ROW -->
       </div>
@@ -536,8 +536,8 @@
     <footer class="footer">
       ©2022 Maersk Hackathon
       <span class="d-none d-sm-inline-block">
-        - Love <i class="mdi mdi-heart text-danger"></i> by
-        Therichpost.com</span
+        <span>- Made with </span>Love
+        <i class="mdi mdi-heart text-danger"></i></span
       >.
     </footer>
   </div>

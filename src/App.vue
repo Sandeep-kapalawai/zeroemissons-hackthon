@@ -7,7 +7,12 @@
       <div class="topbar-left">
         <a href="#" class="logo">
           <span class="logo-light">
-            <i class="mdi mdi-camera-control"></i> Maersk
+            <img
+              src="https://w0.peakpx.com/wallpaper/134/814/HD-wallpaper-maersk-logo-maersk-line-merchant-navy.jpg"
+              height="30"
+              width="30"
+            />
+            Maersk
           </span>
           <span class="logo-sm">
             <i class="mdi mdi-camera-control"></i>
