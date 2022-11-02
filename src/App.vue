@@ -465,94 +465,7 @@
             </li>
 
             <li>
-              <a href="javascript:void(0);" class="waves-effect"
-                ><i class="icon-paper-sheet"></i
-                ><span>
-                  WareHouses
-                  <span class="float-right menu-arrow"
-                    ><i class="mdi mdi-chevron-right"></i
-                  ></span> </span
-              ></a>
-              <ul class="submenu">
-                <li>
-                  <a href="#"
-                    >Pune ICD
-                    <span class="float-right menu-arrow"
-                      ><i class="mdi mdi-chevron-right"></i></span
-                  ></a>
-                  <ul class="submenu">
-                    <li>
-                      <a href="javascript:void(0);" class="waves-effect">
-                        <span class="waves-effect">
-                          RST
-                          <span class="float-right menu-arrow"></span> </span
-                      ></a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0);" class="waves-effect">
-                        <span class="waves-effect">
-                          RT
-                          <span class="float-right menu-arrow"></span> </span
-                      ></a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0);" class="waves-effect">
-                        <span class="waves-effect">
-                          SCANNER
-                          <span class="float-right menu-arrow"></span> </span
-                      ></a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#"
-                    >ROSS
-                    <span class="float-right menu-arrow"
-                      ><i class="mdi mdi-chevron-right"></i></span
-                  ></a>
-                  <ul class="submenu">
-                    <li>
-                      <a href="javascript:void(0);" class="waves-effect">
-                        <span class="waves-effect">
-                          Forklifts
-                          <span class="float-right menu-arrow"></span> </span
-                      ></a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0);" class="waves-effect">
-                        <span class="waves-effect">
-                          Conveyor belts
-                          <span class="float-right menu-arrow"></span> </span
-                      ></a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0);" class="waves-effect">
-                        <span class="waves-effect">
-                          Scanners
-                          <span class="float-right menu-arrow"></span> </span
-                      ></a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <!-- <ul class="submenu">
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Invoice</a></li>
-                <li><a href="#">Timeline</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Maintenance</a></li>
-                <li><a href="#">Coming Soon</a></li>
-                <li><a href="#">Starter Page</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Register</a></li>
-                <li><a href="#">Recover Password</a></li>
-                <li><a href="#">Lock Screen</a></li>
-                <li><a href="#">Error 404</a></li>
-                <li><a href="#">Error 500</a></li>
-              </ul> -->
-            </li>
-            <li>
-              <a href="javascript:void(0);" class="waves-effect"
+              <a href="#" class="waves-effect"
                 ><i class="icon-paper-sheet"></i
                 ><span>
                   Assets
@@ -561,7 +474,11 @@
                   ></span> </span
               ></a>
               <ul class="submenu">
-                <li><a href="#">QC</a></li>
+                <li>
+                  <a href="#" @click="selectedItem" aria-label="Assets-QC"
+                    >QC</a
+                  >
+                </li>
                 <li><a href="#">RTG</a></li>
                 <li><a href="#">TT</a></li>
                 <li><a href="#">ARMG</a></li>
@@ -737,6 +654,10 @@
       :msg="selected"
       v-if="selected === 'TERMINAL-PPV-STS'"
     />
+    <DashboardTerminalAssetsQC
+      :msg="selected"
+      v-if="selected === 'Assets-QC'"
+    />
 
     <!-- ============================================================== -->
     <!-- End Right content here -->
@@ -748,11 +669,13 @@
 <script>
   import Dashboard from "./Dashboard.vue";
   import DashboardTerminalPPVSTSvue from "./DashboardTerminalPPVSTS.vue";
+  import DashboardTerminalAssetsQC from "./DashboardTerminalAssetsQC.vue";
   // import DashboardTerminalRMGC from "./Dashboard.vue";
   export default {
     components: {
       Dashboard,
       DashboardTerminalPPVSTSvue,
+      DashboardTerminalAssetsQC,
       // DashboardTerminalRMGC,
     },
     data() {

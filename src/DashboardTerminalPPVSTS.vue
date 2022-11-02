@@ -57,7 +57,7 @@
                   <i class="mdi mdi-briefcase-check bg-success text-white"></i>
                 </div>
                 <div>
-                  <h5 class="font-16">Energy Score</h5>
+                  <h5 class="font-16">Green Energy Score</h5>
                 </div>
                 <h3 class="mt-4">80/100</h3>
                 <div class="progress mt-4" style="height: 4px">
@@ -248,7 +248,7 @@
             </div>
           </div>
 
-          <div class="col-xl-4">
+          <div class="col-xl-4" v-show="fimsuggestionSelected">
             <div class="card m-b-30">
               <div class="card-body">
                 <h4 class="mt-0 header-title mb-4">FIM Description</h4>
@@ -264,7 +264,7 @@
             </div>
           </div>
 
-          <div class="col-xl-4">
+          <div class="col-xl-4" v-show="fimsuggestionSelected">
             <div class="card m-b-30">
               <div class="card-body">
                 <h4 class="mt-0 header-title mb-4">FIM BENEFITS</h4>

@@ -30,21 +30,21 @@
                   <i class="mdi mdi-cube-outline bg-primary text-white"></i>
                 </div>
                 <div>
-                  <h5 class="font-16">Total Yearly Diesel Consumption</h5>
+                  <h5 class="font-16">Total Yearly Electricity Consumption</h5>
                 </div>
-                <h3 class="mt-4">5.8 million litres</h3>
+                <h3 class="mt-4">17M KWH</h3>
                 <div class="progress mt-4" style="height: 4px">
                   <div
                     class="progress-bar bg-primary"
                     role="progressbar"
-                    style="width: 14%"
+                    style="width: 5%"
                     aria-valuenow="75"
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
                 </div>
                 <p class="text-muted mt-2 mb-0">
-                  Reduced by <span class="float-right">14%</span>
+                  Reduced by <span class="float-right">5%</span>
                 </p>
               </div>
             </div>
@@ -59,7 +59,7 @@
                 <div>
                   <h5 class="font-16">Green Energy Score</h5>
                 </div>
-                <h3 class="mt-4">45/100</h3>
+                <h3 class="mt-4">80/100</h3>
                 <div class="progress mt-4" style="height: 4px">
                   <div
                     class="progress-bar bg-success"
@@ -86,7 +86,7 @@
                 <div>
                   <h5 class="font-16">Total Yearly C0<sup>2</sup> Emission</h5>
                 </div>
-                <h3 class="mt-4">151,276 tonnes</h3>
+                <h3 class="mt-4">200 MILLION TONNES</h3>
                 <div class="progress mt-4" style="height: 4px">
                   <div
                     class="progress-bar bg-warning"
@@ -113,7 +113,7 @@
                 <div>
                   <h5 class="font-16">Zero Emission Initiatives</h5>
                 </div>
-                <h3 class="mt-4">4</h3>
+                <h3 class="mt-4">3</h3>
                 <div class="progress mt-4" style="height: 4px">
                   <div
                     class="progress-bar bg-danger"
@@ -132,246 +132,66 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-xl-8">
-            <div class="card m-b-30">
-              <div class="card-body">
-                <h4 class="mt-0 header-title mb-4">Energy Consumption</h4>
-                <apexcharts
-                  type="bar"
-                  height="350"
-                  :options="chartOptionsstacked"
-                  :series="seriesstacked"
-                />
-                <!-- <div
-                  id="morris-area-example"
-                  class="morris-charts morris-chart-height"
-                ></div> -->
-              </div>
-            </div>
-          </div>
-          <!-- end col -->
-
-          <div class="col-xl-4">
-            <div class="card m-b-30">
-              <div class="card-body">
-                <h4 class="mt-0 header-title mb-4">Energy Trend</h4>
-                <apexcharts
-                  type="donut"
-                  height="350"
-                  :options="chartOptionsdonut"
-                  :series="seriesdonut"
-                ></apexcharts>
-                <!-- 
-                <div
-                  id="morris-donut-example"
-                  class="morris-charts morris-chart-height"
-                ></div> -->
-              </div>
-            </div>
-          </div>
-          <!-- end col -->
-        </div>
         <!-- end row -->
-
-        <div class="row">
-          <div class="col-xl-4">
-            <div class="card m-b-30">
-              <div class="card-body">
-                <h4 class="mt-0 header-title mb-4">FIM Suggestions</h4>
-                <div class="friends-suggestions">
-                  <a href="#" class="friends-suggestions-list">
-                    <div class="border-bottom position-relative">
-                      <!-- <div class="float-left mb-0 mr-3">
-                        <img
-                          src="assets/images/user-3.jpg"
-                          alt=""
-                          class="rounded-circle thumb-md"
-                        />
-                      </div> -->
-                      <div class="suggestion-icon float-right mt-2 pt-1">
-                        <i class="mdi mdi-forward"></i>
-                      </div>
-
-                      <div class="desc">
-                        <h5 class="font-14 mb-1 pt-2" @click="fimsuggestion">
-                          Rubber Tyred Gantry Crane Optimization
-                        </h5>
-                        <p class="text-muted">&nbsp;</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#" class="friends-suggestions-list">
-                    <div class="border-bottom position-relative">
-                      <!-- <div class="float-left mb-0 mr-3">
-                        <img
-                          src="assets/images/user-3.jpg"
-                          alt=""
-                          class="rounded-circle thumb-md"
-                        />
-                      </div> -->
-                      <div class="suggestion-icon float-right mt-2 pt-1">
-                        <i class="mdi mdi-forward"></i>
-                      </div>
-
-                      <div class="desc">
-                        <h5 class="font-14 mb-1 pt-2" @click="fimsuggestion">
-                          Transformer optimization
-                        </h5>
-                        <p class="text-muted">&nbsp;</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#" class="friends-suggestions-list">
-                    <div class="border-bottom position-relative">
-                      <!-- <div class="float-left mb-0 mr-3">
-                        <img
-                          src="assets/images/user-3.jpg"
-                          alt=""
-                          class="rounded-circle thumb-md"
-                        />
-                      </div> -->
-                      <div class="suggestion-icon float-right mt-2 pt-1">
-                        <i class="mdi mdi-forward"></i>
-                      </div>
-
-                      <div class="desc">
-                        <h5 class="font-14 mb-1 pt-2" @click="fimsuggestion">
-                          Reefer Optimization
-                        </h5>
-                        <p class="text-muted">&nbsp;</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#" class="friends-suggestions-list">
-                    <div class="border-bottom position-relative">
-                      <!-- <div class="float-left mb-0 mr-3">
-                        <img
-                          src="assets/images/user-3.jpg"
-                          alt=""
-                          class="rounded-circle thumb-md"
-                        />
-                      </div> -->
-                      <div class="suggestion-icon float-right mt-2 pt-1">
-                        <i class="mdi mdi-forward"></i>
-                      </div>
-
-                      <div class="desc">
-                        <h5 class="font-14 mb-1 pt-2" @click="fimsuggestion">
-                          Distributed Energy System
-                        </h5>
-                        <p class="text-muted">&nbsp;</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-4" v-show="fimsuggestionSelected">
-            <div class="card m-b-30">
-              <div class="card-body">
-                <h4 class="mt-0 header-title mb-4">FIM Description</h4>
-
-                {{ renderfimDescription }}
-
-                <!-- <div
-                  id="morris-line-example"
-                  class="morris-chart"
-                  style="height: 360px"
-                ></div> -->
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-4" v-show="fimsuggestionSelected">
-            <div class="card m-b-30">
-              <div class="card-body">
-                <h4 class="mt-0 header-title mb-4">FIM BENEFITS</h4>
-                <ol class="activity-feed mb-0">
-                  <li class="feed-item">
-                    <div class="feed-item-list">
-                      <!-- <p class="text-muted mb-1">Now</p> -->
-                      <p class="font-15 mt-0 mb-0">
-                        {{ renderfimlistitemone }}
-                      </p>
-                    </div>
-                  </li>
-                  <li class="feed-item">
-                    <p class="font-15 mt-0 mb-0">
-                      {{ renderfimlistitemtwo }}
-                    </p>
-                  </li>
-                  <li class="feed-item">
-                    <p class="font-15 mt-0 mb-0">
-                      {{ renderfimlistitemthree }}
-                    </p>
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <!-- START ROW -->
         <div class="row">
           <div class="col-xl-12">
             <div class="card m-b-30">
               <div class="card-body">
-                <h4 class="mt-0 header-title mb-4">Asset Details</h4>
+                <h4 class="mt-0 header-title mb-4">
+                  Asset Performance (Emissions)
+                </h4>
                 <div class="table-responsive">
                   <table class="table table-hover">
                     <thead>
                       <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Energy Type</th>
-                        <th scope="col"></th>
-                        <th scope="col">Count</th>
+                        <th scope="col">Manufacturer</th>
+                        <th scope="col">Scope 1 (tCo2e)</th>
+                        <th scope="col">Scope 2 (Market based tCo2e)</th>
+                        <th scope="col">Scope 3 (Suppliers)</th>
 
-                        <th scope="col">Location</th>
-                        <th scope="col" colspan="2">Last Modified</th>
+                        <th scope="col">Total Emissions</th>
+                        <th scope="col">Year</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Quay Crane - QC</td>
                         <td>
-                          <span>Diesel</span>
+                          <a
+                            href="https://www.cargotec.com/en/sustainability/sustainability-at-our-company/performance/"
+                            >Kalmar</a
+                          >
                         </td>
                         <td>
-                          <div class="circle-brown"></div>
+                          <span>21,300</span>
                         </td>
-                        <td>10</td>
+                        <td>
+                          <div>20,200</div>
+                        </td>
+                        <td>6139000</td>
 
-                        <td>India</td>
-                        <td>10/10/2022</td>
+                        <td>6180500</td>
+                        <td>2021</td>
                       </tr>
-                      <tr>
-                        <td>Rubber Tyred Gantry - RTG</td>
-                        <td>
-                          <span> Hybrid</span>
-                        </td>
-                        <td>
-                          <div class="circle-green"></div>
-                        </td>
-                        <td>36</td>
 
-                        <td>India</td>
-                        <td>10/10/2022</td>
-                      </tr>
                       <tr>
-                        <td>Terminal Tractor - TT</td>
                         <td>
-                          <span> Brown</span>
+                          <a
+                            href="https://investors.konecranes.com/sites/default/files/AR2021/sustainability_report_2021.pdf"
+                            >Konecranes</a
+                          >
                         </td>
                         <td>
-                          <div class="circle-brown"></div>
+                          <span>44500</span>
                         </td>
-                        <td>126</td>
+                        <td>
+                          <div>14400</div>
+                        </td>
+                        <td>5158600</td>
 
-                        <td>India</td>
-                        <td>10/10/2022</td>
+                        <td>5217500</td>
+                        <td>2021</td>
                       </tr>
                     </tbody>
                   </table>
@@ -434,20 +254,17 @@
   <!-- ============================================================== -->
 </template>
 <script>
-  import VueApexCharts from "vue3-apexcharts";
+  // import VueApexCharts from "vue3-apexcharts";
   import "vue-awesome/icons";
 
   // import Icon from "vue-awesome/components/Icon";
 
   export default {
-    name: "Dashboard",
+    name: "DashboardTerminalAssetsQC",
     props: {
       msg: String,
     },
-    components: {
-      apexcharts: VueApexCharts,
-      // "v-icon": Icon,
-    },
+
     data: function () {
       return {
         fimsuggestionSelected: "",
@@ -482,14 +299,12 @@
           },
         ],
         options: {},
-        seriesdonut: [40, 55, 4], //series -3 is green /renewable , 1-disel red ,2 yellow-electric
+        seriesdonut: [44, 55, 41, 17, 15],
         chartOptionsdonut: {
-          labels: ["Diesel", "Electric", "Renewable"],
           chart: {
             type: "donut",
             foreColor: "#FFFFFF",
           },
-          colors: ["#E64848", "#FFF38C", "#379237"],
           responsive: [
             {
               breakpoint: 480,
@@ -588,21 +403,29 @@
         },
         seriesstacked: [
           {
-            name: "Reefer Electricity Consumption (KWH)",
-            data: [18102, 14150, 15433, 19215, 17518, 16923, 16601],
+            name: "Marine Sprite",
+            data: [44, 55, 41, 37, 22, 43, 21],
           },
           {
-            name: "Total Electricity Consuption (KWH)",
-            data: [29836, 25457, 25348, 29493, 27962, 27051, 25987],
+            name: "Striking Calf",
+            data: [53, 32, 33, 52, 13, 43, 32],
           },
           {
-            name: "Diesel Consumption(LTRS)",
-            data: [6590, 6235, 5567, 6476, 6515, 6590, 5848],
+            name: "Tank Picture",
+            data: [12, 17, 11, 9, 15, 11, 20],
+          },
+          {
+            name: "Bucket Slope",
+            data: [9, 7, 5, 8, 6, 9, 4],
+          },
+          {
+            name: "Reborn Kid",
+            data: [25, 12, 19, 32, 25, 24, 10],
           },
         ],
         chartOptionsstacked: {
           title: {
-            text: "",
+            text: "hello",
             align: "left",
             margin: 10,
             offsetX: 0,
@@ -652,7 +475,7 @@
           //   text: "",
           // },
           xaxis: {
-            categories: [2014, 2015, 2016, 2017, 2018, 2019, 2020],
+            categories: [2008, 2009, 2010, 2011, 2012, 2013, 2014],
             labels: {
               formatter: function (val) {
                 return val + "K";
@@ -661,7 +484,7 @@
           },
           yaxis: {
             title: {
-              text: "",
+              text: "test",
             },
           },
           tooltip: {
@@ -706,62 +529,50 @@
     },
     computed: {
       renderfimDescription() {
-        if (
-          this.fimsuggestionSelected ===
-          "Rubber Tyred Gantry Crane Optimization"
+        if (this.fimsuggestionSelected === "Crane Optimization") {
+          return "identified several measures to optimize the energy consumption of the cranes -AC Control, Motor Heater Control, Replace Service Brakes, Replace Spreader Cable Reel Motor";
+        } else if (
+          this.fimsuggestionSelected === "HVAC Control/Building Automation"
         ) {
-          return "Concept of substituting less efficient big capacity Diesel Generator, which used to feed the RTG power during operation with an energy storage battery system & better efficient smaller capacity Diesel Generator to provide a positive recharge cycle, which means DG will be used for only charging the batteries to compensate the loss of energy on account of “RTG electro-mechanical overall efficiency";
-        } else if (this.fimsuggestionSelected === "Transformer optimization") {
-          return "Transformer paralleling operation would be governed by programming the RTU panel with two modes of operation - Automatic and Manual mode. Transformer Optimization FIM reduces losses in the operation of substations E2 and E3 substation";
-        } else if (this.fimsuggestionSelected === "Reefer Optimization") {
-          return "Reefer Optimization FIM smoothens peaks in terminal power consumption and to reduce energy consumption in the reefer area, which is responsible for almost 2/3 of the entire terminal electricity consumption.";
-        } else if (this.fimsuggestionSelected === "Distributed Energy System") {
-          return "Distributed energy system involves the design, engineering, supply, installation, commissioning, supervision, and services for a distributed energy system comprising of a cantilever based 1.5MWp DC solar system on the piers, a containerized battery energy storage system of 2.7MWh (3.6MWh Nameplate), a microgrid controller and digital solution";
+          return "Installing a new building automation system (BAS) to integrate with the thermostats being provided with the new equipment. This will allow monitoring of the HVAC systems from a centralized dashboard. Additionally, schedules and setpoints can be adjusted at the building automation system front end and pushed to the individual thermostats. This will facilitate optimization of setpoints, and equipment operating schedules based on actual occupancy of building spaces.";
+        } else if (this.fimsuggestionSelected === "Exterior Lighting Control") {
+          return "Replacing the original high pressure sodium fixtures with new LED fixtures. This measure is a quantification of the savings potential. Additional savings can be captured through the dimming feature in other areas.";
         }
         return "";
       },
-      renderfimlistitemone() {
-        if (
-          this.fimsuggestionSelected ===
-          "Rubber Tyred Gantry Crane Optimization"
+      renderfimbenefitsitemone() {
+        if (this.fimsuggestionSelected === "Crane Optimization") {
+          return "Energy Cost Savings";
+        } else if (
+          this.fimsuggestionSelected === "HVAC Control/Building Automation"
         ) {
-          return "Fuel savings";
-        } else if (this.fimsuggestionSelected === "Transformer optimization") {
           return "Energy cost savings";
-        } else if (this.fimsuggestionSelected === "Reefer Optimization") {
+        } else if (this.fimsuggestionSelected === "Exterior Lighting Control") {
           return "Energy cost savings";
-        } else if (this.fimsuggestionSelected === "Distributed Energy System") {
-          return " Energy cost savings";
         }
         return "";
       },
-      renderfimlistitemtwo() {
-        if (
-          this.fimsuggestionSelected ===
-          "Rubber Tyred Gantry Crane Optimization"
+      renderfimbenefitsitemtwo() {
+        if (this.fimsuggestionSelected === "Crane Optimization") {
+          return "Carbon Reduction";
+        } else if (
+          this.fimsuggestionSelected === "HVAC Control/Building Automation"
         ) {
-          return "Carbon reduction";
-        } else if (this.fimsuggestionSelected === "Transformer optimization") {
-          return "Carbon reduction";
-        } else if (this.fimsuggestionSelected === "Reefer Optimization") {
-          return "Carbon reduction";
-        } else if (this.fimsuggestionSelected === "Distributed Energy System") {
-          return "Carbon reduction";
+          return "Optimization of investment";
+        } else if (this.fimsuggestionSelected === "Exterior Lighting Control") {
+          return "Carbon Reduction";
         }
         return "";
       },
-      renderfimlistitemthree() {
-        if (
-          this.fimsuggestionSelected ===
-          "Rubber Tyred Gantry Crane Optimization"
+      renderfimbenefitsitemthree() {
+        if (this.fimsuggestionSelected === "Crane Optimization") {
+          return "Reduce overcooling of E House and PLC room";
+        } else if (
+          this.fimsuggestionSelected === "HVAC Control/Building Automation"
         ) {
-          return "Productivity capture";
-        } else if (this.fimsuggestionSelected === "Transformer optimization") {
-          return "Optimization of investment ";
-        } else if (this.fimsuggestionSelected === "Reefer Optimization") {
-          return "Reduced overall peak load of terminal";
-        } else if (this.fimsuggestionSelected === "Distributed Energy System") {
-          return "Optimization of investment ";
+          return " Platform base for future system integration";
+        } else if (this.fimsuggestionSelected === "Exterior Lighting Control") {
+          return " No implementation costs";
         }
         return "";
       },
