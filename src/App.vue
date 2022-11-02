@@ -200,7 +200,7 @@
                 aria-expanded="false"
               >
                 <img
-                  src="assets/images/user-4.jpg"
+                  src="assets/images/Maersk.png"
                   alt="user"
                   class="rounded-circle"
                 />
@@ -333,6 +333,51 @@
                       >
                         <span class="waves-effect">
                           TT
+                          <span class="float-right menu-arrow"></span> </span
+                      ></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    >PPV
+                    <span class="float-right menu-arrow"
+                      ><i class="mdi mdi-chevron-right"></i></span
+                  ></a>
+                  <ul class="submenu">
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-PPV-STS"
+                      >
+                        <span class="waves-effect">
+                          STS
+                          <span class="float-right menu-arrow"></span> </span
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-P400-SC"
+                      >
+                        <span class="waves-effect">
+                          RMGC
+                          <span class="float-right menu-arrow"></span> </span
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-PPV-ERTG"
+                      >
+                        <span class="waves-effect">
+                          ERTG
                           <span class="float-right menu-arrow"></span> </span
                       ></a>
                     </li>
@@ -688,10 +733,11 @@
     <!-- ============================================================== -->
     <Dashboard :msg="selected" v-if="selected === ''" />
     <Dashboard :msg="selected" v-if="selected === 'TERMINAL-GTI-QC'" />
-    <DashboardTerminalRMGC
+    <DashboardTerminalPPVSTSvue
       :msg="selected"
-      v-if="selected === 'TERMINAL-GTI-RMGC'"
+      v-if="selected === 'TERMINAL-PPV-STS'"
     />
+
     <!-- ============================================================== -->
     <!-- End Right content here -->
     <!-- ============================================================== -->
@@ -701,11 +747,13 @@
 
 <script>
   import Dashboard from "./Dashboard.vue";
-  import DashboardTerminalRMGC from "./Dashboard.vue";
+  import DashboardTerminalPPVSTSvue from "./DashboardTerminalPPVSTS.vue";
+  // import DashboardTerminalRMGC from "./Dashboard.vue";
   export default {
     components: {
       Dashboard,
-      DashboardTerminalRMGC,
+      DashboardTerminalPPVSTSvue,
+      // DashboardTerminalRMGC,
     },
     data() {
       return {

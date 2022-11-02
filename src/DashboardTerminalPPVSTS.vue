@@ -30,21 +30,21 @@
                   <i class="mdi mdi-cube-outline bg-primary text-white"></i>
                 </div>
                 <div>
-                  <h5 class="font-16">Total Yearly Diesel Consumption</h5>
+                  <h5 class="font-16">Total Yearly Electricity Consumption</h5>
                 </div>
-                <h3 class="mt-4">5.8 million litres</h3>
+                <h3 class="mt-4">17M KWH</h3>
                 <div class="progress mt-4" style="height: 4px">
                   <div
                     class="progress-bar bg-primary"
                     role="progressbar"
-                    style="width: 14%"
+                    style="width: 5%"
                     aria-valuenow="75"
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
                 </div>
                 <p class="text-muted mt-2 mb-0">
-                  Reduced by <span class="float-right">14%</span>
+                  Reduced by <span class="float-right">5%</span>
                 </p>
               </div>
             </div>
@@ -59,7 +59,7 @@
                 <div>
                   <h5 class="font-16">Energy Score</h5>
                 </div>
-                <h3 class="mt-4">45/100</h3>
+                <h3 class="mt-4">80/100</h3>
                 <div class="progress mt-4" style="height: 4px">
                   <div
                     class="progress-bar bg-success"
@@ -86,7 +86,7 @@
                 <div>
                   <h5 class="font-16">Total Yearly C0<sup>2</sup> Emission</h5>
                 </div>
-                <h3 class="mt-4">151,276 tonnes</h3>
+                <h3 class="mt-4">200 MILLION TONNES</h3>
                 <div class="progress mt-4" style="height: 4px">
                   <div
                     class="progress-bar bg-warning"
@@ -195,7 +195,7 @@
 
                       <div class="desc">
                         <h5 class="font-14 mb-1 pt-2" @click="fimsuggestion">
-                          Rubber Tyred Gantry Crane Optimization
+                          Crane Optimization
                         </h5>
                         <p class="text-muted">&nbsp;</p>
                       </div>
@@ -216,7 +216,7 @@
 
                       <div class="desc">
                         <h5 class="font-14 mb-1 pt-2" @click="fimsuggestion">
-                          Transformer optimization
+                          HVAC Control/Building Automation
                         </h5>
                         <p class="text-muted">&nbsp;</p>
                       </div>
@@ -237,28 +237,7 @@
 
                       <div class="desc">
                         <h5 class="font-14 mb-1 pt-2" @click="fimsuggestion">
-                          Reefer Optimization
-                        </h5>
-                        <p class="text-muted">&nbsp;</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#" class="friends-suggestions-list">
-                    <div class="border-bottom position-relative">
-                      <!-- <div class="float-left mb-0 mr-3">
-                        <img
-                          src="assets/images/user-3.jpg"
-                          alt=""
-                          class="rounded-circle thumb-md"
-                        />
-                      </div> -->
-                      <div class="suggestion-icon float-right mt-2 pt-1">
-                        <i class="mdi mdi-forward"></i>
-                      </div>
-
-                      <div class="desc">
-                        <h5 class="font-14 mb-1 pt-2" @click="fimsuggestion">
-                          Distributed Energy System
+                          Exterior Lighting Control
                         </h5>
                         <p class="text-muted">&nbsp;</p>
                       </div>
@@ -292,20 +271,21 @@
                 <ol class="activity-feed mb-0">
                   <li class="feed-item">
                     <div class="feed-item-list">
-                      <!-- <p class="text-muted mb-1">Now</p> -->
+                      <p class="text-muted mb-1"></p>
                       <p class="font-15 mt-0 mb-0">
-                        {{ renderfimlistitemone }}
+                        {{ renderfimbenefitsitemone }}
                       </p>
                     </div>
                   </li>
                   <li class="feed-item">
+                    <p class="text-muted mb-1"></p>
                     <p class="font-15 mt-0 mb-0">
-                      {{ renderfimlistitemtwo }}
+                      {{ renderfimbenefitsitemtwo }}
                     </p>
                   </li>
                   <li class="feed-item">
                     <p class="font-15 mt-0 mb-0">
-                      {{ renderfimlistitemthree }}
+                      {{ renderfimbenefitsitemthree }}
                     </p>
                   </li>
                 </ol>
@@ -335,43 +315,43 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Quay Crane - QC</td>
+                        <td>Ship-to-shore (STS)</td>
                         <td>
-                          <span>Diesel</span>
+                          <span>Electric</span>
                         </td>
                         <td>
-                          <div class="circle-brown"></div>
+                          <div class="circle-green"></div>
                         </td>
-                        <td>10</td>
+                        <td>8</td>
 
                         <td>India</td>
-                        <td>10/10/2022</td>
+                        <td>31/10/2022</td>
                       </tr>
                       <tr>
-                        <td>Rubber Tyred Gantry - RTG</td>
+                        <td>Rail Mounted Gantry Crane - RMGC</td>
                         <td>
                           <span> Electric</span>
                         </td>
                         <td>
-                          <div class="circle-brown"></div>
+                          <div class="circle-green"></div>
                         </td>
-                        <td>36</td>
+                        <td>4</td>
 
                         <td>India</td>
-                        <td>10/10/2022</td>
+                        <td>31/10/2022</td>
                       </tr>
                       <tr>
-                        <td>Terminal Tractor - TT</td>
+                        <td>Electrified Rubber Tired Gantry - ERTG</td>
                         <td>
-                          <span> Brown</span>
+                          <span>Electric</span>
                         </td>
                         <td>
-                          <div class="circle-brown"></div>
+                          <div class="circle-green"></div>
                         </td>
-                        <td>126</td>
+                        <td>7</td>
 
                         <td>India</td>
-                        <td>10/10/2022</td>
+                        <td>31/10/2022</td>
                       </tr>
                     </tbody>
                   </table>
@@ -586,38 +566,29 @@
         },
         seriesstacked: [
           {
-            name: "Year	Reefer Electricity Consumption (KWH)",
-            data: [
-              18102314, 14150131, 15433417, 19215401, 17518758, 16923881,
-              16601951,
-            ],
+            name: "Marine Sprite",
+            data: [44, 55, 41, 37, 22, 43, 21],
           },
           {
-            name: "Total Electricity Consuption (KWH)",
-            data: [
-              29836332, 25457025, 25348035, 29493091, 27962613, 2705184,
-              25987615,
-            ],
+            name: "Striking Calf",
+            data: [53, 32, 33, 52, 13, 43, 32],
           },
           {
-            name: "Diesel Consumption(ltrs)",
-            data: [
-              6580413, 6235642, 5567160, 6476368, 6515367, 6590467, 5848780,
-            ],
+            name: "Tank Picture",
+            data: [12, 17, 11, 9, 15, 11, 20],
           },
           {
-            name: "Kg CO2/TEU ( As per scope 1&2)",
-
-            data: [14.231, 14.144, 13.289, 13.627, 12.97, 13.411, 14.364],
+            name: "Bucket Slope",
+            data: [9, 7, 5, 8, 6, 9, 4],
           },
           {
-            name: "Kg CO2/TEU (Considering Total Consumption)",
-            data: [22.666, 21.02, 21.238, 22.732, 20.795, 21.256, 23.51],
+            name: "Reborn Kid",
+            data: [25, 12, 19, 32, 25, 24, 10],
           },
         ],
         chartOptionsstacked: {
           title: {
-            text: "",
+            text: "hello",
             align: "left",
             margin: 10,
             offsetX: 0,
@@ -667,7 +638,7 @@
           //   text: "",
           // },
           xaxis: {
-            categories: [2014, 2015, 2016, 2017, 2018, 2019, 2020],
+            categories: [2008, 2009, 2010, 2011, 2012, 2013, 2014],
             labels: {
               formatter: function (val) {
                 return val + "K";
@@ -721,62 +692,50 @@
     },
     computed: {
       renderfimDescription() {
-        if (
-          this.fimsuggestionSelected ===
-          "Rubber Tyred Gantry Crane Optimization"
+        if (this.fimsuggestionSelected === "Crane Optimization") {
+          return "identified several measures to optimize the energy consumption of the cranes -AC Control, Motor Heater Control, Replace Service Brakes, Replace Spreader Cable Reel Motor";
+        } else if (
+          this.fimsuggestionSelected === "HVAC Control/Building Automation"
         ) {
-          return "Concept of substituting less efficient big capacity Diesel Generator, which used to feed the RTG power during operation with an energy storage battery system & better efficient smaller capacity Diesel Generator to provide a positive recharge cycle, which means DG will be used for only charging the batteries to compensate the loss of energy on account of “RTG electro-mechanical overall efficiency";
-        } else if (this.fimsuggestionSelected === "Transformer optimization") {
-          return "Transformer paralleling operation would be governed by programming the RTU panel with two modes of operation - Automatic and Manual mode. Transformer Optimization FIM reduces losses in the operation of substations E2 and E3 substation";
-        } else if (this.fimsuggestionSelected === "Reefer Optimization") {
-          return "Reefer Optimization FIM smoothens peaks in terminal power consumption and to reduce energy consumption in the reefer area, which is responsible for almost 2/3 of the entire terminal electricity consumption.";
-        } else if (this.fimsuggestionSelected === "Distributed Energy System") {
-          return "Distributed energy system involves the design, engineering, supply, installation, commissioning, supervision, and services for a distributed energy system comprising of a cantilever based 1.5MWp DC solar system on the piers, a containerized battery energy storage system of 2.7MWh (3.6MWh Nameplate), a microgrid controller and digital solution";
+          return "Installing a new building automation system (BAS) to integrate with the thermostats being provided with the new equipment. This will allow monitoring of the HVAC systems from a centralized dashboard. Additionally, schedules and setpoints can be adjusted at the building automation system front end and pushed to the individual thermostats. This will facilitate optimization of setpoints, and equipment operating schedules based on actual occupancy of building spaces.";
+        } else if (this.fimsuggestionSelected === "Exterior Lighting Control") {
+          return "Replacing the original high pressure sodium fixtures with new LED fixtures. This measure is a quantification of the savings potential. Additional savings can be captured through the dimming feature in other areas.";
         }
         return "";
       },
-      renderfimlistitemone() {
-        if (
-          this.fimsuggestionSelected ===
-          "Rubber Tyred Gantry Crane Optimization"
+      renderfimbenefitsitemone() {
+        if (this.fimsuggestionSelected === "Crane Optimization") {
+          return "Energy Cost Savings";
+        } else if (
+          this.fimsuggestionSelected === "HVAC Control/Building Automation"
         ) {
-          return "Fuel savings";
-        } else if (this.fimsuggestionSelected === "Transformer optimization") {
           return "Energy cost savings";
-        } else if (this.fimsuggestionSelected === "Reefer Optimization") {
+        } else if (this.fimsuggestionSelected === "Exterior Lighting Control") {
           return "Energy cost savings";
-        } else if (this.fimsuggestionSelected === "Distributed Energy System") {
-          return " Energy cost savings";
         }
         return "";
       },
-      renderfimlistitemtwo() {
-        if (
-          this.fimsuggestionSelected ===
-          "Rubber Tyred Gantry Crane Optimization"
+      renderfimbenefitsitemtwo() {
+        if (this.fimsuggestionSelected === "Crane Optimization") {
+          return "Carbon Reduction";
+        } else if (
+          this.fimsuggestionSelected === "HVAC Control/Building Automation"
         ) {
-          return "Carbon reduction";
-        } else if (this.fimsuggestionSelected === "Transformer optimization") {
-          return "Carbon reduction";
-        } else if (this.fimsuggestionSelected === "Reefer Optimization") {
-          return "Carbon reduction";
-        } else if (this.fimsuggestionSelected === "Distributed Energy System") {
-          return "Carbon reduction";
+          return "Optimization of investment";
+        } else if (this.fimsuggestionSelected === "Exterior Lighting Control") {
+          return "Carbon Reduction";
         }
         return "";
       },
-      renderfimlistitemthree() {
-        if (
-          this.fimsuggestionSelected ===
-          "Rubber Tyred Gantry Crane Optimization"
+      renderfimbenefitsitemthree() {
+        if (this.fimsuggestionSelected === "Crane Optimization") {
+          return "Reduce overcooling of E House and PLC room";
+        } else if (
+          this.fimsuggestionSelected === "HVAC Control/Building Automation"
         ) {
-          return "Productivity capture";
-        } else if (this.fimsuggestionSelected === "Transformer optimization") {
-          return "Optimization of investment ";
-        } else if (this.fimsuggestionSelected === "Reefer Optimization") {
-          return "Reduced overall peak load of terminal";
-        } else if (this.fimsuggestionSelected === "Distributed Energy System") {
-          return "Optimization of investment ";
+          return " Platform base for future system integration";
+        } else if (this.fimsuggestionSelected === "Exterior Lighting Control") {
+          return " No implementation costs";
         }
         return "";
       },
