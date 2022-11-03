@@ -113,7 +113,7 @@
                 <div>
                   <h5 class="font-16">Zero Emission Initiatives</h5>
                 </div>
-                <h3 class="mt-4">4</h3>
+                <h3 class="mt-4">5</h3>
                 <div class="progress mt-4" style="height: 4px">
                   <div
                     class="progress-bar bg-danger"
@@ -259,6 +259,27 @@
                       <div class="desc">
                         <h5 class="font-14 mb-1 pt-2" @click="fimsuggestion">
                           Distributed Energy System
+                        </h5>
+                        <p class="text-muted">&nbsp;</p>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="friends-suggestions-list">
+                    <div class="border-bottom position-relative">
+                      <!-- <div class="float-left mb-0 mr-3">
+                        <img
+                          src="assets/images/user-3.jpg"
+                          alt=""
+                          class="rounded-circle thumb-md"
+                        />
+                      </div> -->
+                      <div class="suggestion-icon float-right mt-2 pt-1">
+                        <i class="mdi mdi-forward"></i>
+                      </div>
+
+                      <div class="desc">
+                        <h5 class="font-14 mb-1 pt-2" @click="fimsuggestion">
+                          Green Power Purchase
                         </h5>
                         <p class="text-muted">&nbsp;</p>
                       </div>
@@ -489,7 +510,7 @@
             type: "donut",
             foreColor: "#FFFFFF",
           },
-          colors: ["#E64848", "#FFF38C", "#379237"],
+          colors: ["#1f0000", "#c9e423", "#379237"],
           responsive: [
             {
               breakpoint: 480,
@@ -596,7 +617,7 @@
             data: [29836, 25457, 25348, 29493, 27962, 27051, 25987],
           },
           {
-            name: "Diesel Consumption(LTRS)",
+            name: "Diesel Consumption(Litres)",
             data: [6590, 6235, 5567, 6476, 6515, 6590, 5848],
           },
         ],
@@ -717,6 +738,8 @@
           return "Reefer Optimization FIM smoothens peaks in terminal power consumption and to reduce energy consumption in the reefer area, which is responsible for almost 2/3 of the entire terminal electricity consumption.";
         } else if (this.fimsuggestionSelected === "Distributed Energy System") {
           return "Distributed energy system involves the design, engineering, supply, installation, commissioning, supervision, and services for a distributed energy system comprising of a cantilever based 1.5MWp DC solar system on the piers, a containerized battery energy storage system of 2.7MWh (3.6MWh Nameplate), a microgrid controller and digital solution";
+        } else if (this.fimsuggestionSelected === "Green Power Purchase") {
+          return "Green power refers specifically to electricity supplied from a subset of renewable resources that provide the highest environmental benefit. Green power provides benefits both directly and indirectly to the buyer. Organizations interested in buying green power can go for options like green power procurement process, different green power supply options, benefits of green power purchasing, as well as information on how to capture the greatest benefit from your purchase.";
         }
         return "";
       },
@@ -732,6 +755,8 @@
           return "Energy cost savings";
         } else if (this.fimsuggestionSelected === "Distributed Energy System") {
           return " Energy cost savings";
+        } else if (this.fimsuggestionSelected === "Green Power Purchase") {
+          return "Environmental benefits";
         }
         return "";
       },
@@ -747,6 +772,8 @@
           return "Carbon reduction";
         } else if (this.fimsuggestionSelected === "Distributed Energy System") {
           return "Carbon reduction";
+        } else if (this.fimsuggestionSelected === "Green Power Purchase") {
+          return "Economic benefits to the purchasing organization";
         }
         return "";
       },
@@ -762,6 +789,8 @@
           return "Reduced overall peak load of terminal";
         } else if (this.fimsuggestionSelected === "Distributed Energy System") {
           return "Optimization of investment ";
+        } else if (this.fimsuggestionSelected === "Green Power Purchase") {
+          return "Development of domestic energy resources";
         }
         return "";
       },
