@@ -247,6 +247,7 @@
               </div>
             </form>
           </li>
+          <span class="title-large center">Zero Emission Pathway</span>
         </ul>
       </nav>
     </div>
@@ -259,35 +260,37 @@
         <div id="sidebar-menu">
           <!-- Left Menu Start -->
           <ul class="metismenu" id="side-menu">
-            <li class="menu-title">Zero Emission Pathway</li>
-            <!-- <li>
-              <a href="#" class="waves-effect">
-                <i class="icon-accelerator"></i
-                ><span class="badge badge-success badge-pill float-right"
-                  >9+</span
-                >
-                <span> Dashboard </span>
-              </a>
-            </li> -->
-
+            <!-- <li class="menu-title">Zero Emission Pathway</li> -->
             <li>
-              <a href="javascript:void(0);" class="waves-effect"
-                ><img
-                  src="https://e7.pngegg.com/pngimages/722/746/png-clipart-crane-architectural-engineering-computer-icons-infographic-port-terminal-infographic-angle-thumbnail.png"
-                  height="10" /><span>
-                  Terminal
+              <a href="javascript:void(0);" class="waves-effect">
+                <span>
+                  Maersk
                   <span class="float-right menu-arrow"
                     ><i class="mdi mdi-chevron-right"></i
                   ></span> </span
               ></a>
               <ul class="submenu">
                 <li>
-                  <a href="#"
-                    >GTI
+                  <a
+                    href="#"
+                    @click="selectedItem"
+                    aria-label="TERMINAL "
+                    class="waves-effect"
+                  >
                     <span class="float-right menu-arrow"
                       ><i class="mdi mdi-chevron-right"></i></span
-                  ></a>
+                    >Terminal</a
+                  >
                   <ul class="submenu">
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL > GTI"
+                        >GTI
+                      </a>
+                      <!-- <ul class="submenu">
                     <li>
                       <a
                         href="#"
@@ -336,21 +339,23 @@
                           <span class="float-right menu-arrow"></span> </span
                       ></a>
                     </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#"
-                    >PPV
-                    <span class="float-right menu-arrow"
-                      ><i class="mdi mdi-chevron-right"></i></span
-                  ></a>
-                  <ul class="submenu">
+                  </ul> -->
+                    </li>
                     <li>
                       <a
                         href="#"
                         @click="selectedItem"
                         class="waves-effect"
-                        aria-label="TERMINAL-PPV-STS"
+                        aria-label="TERMINAL > PPV"
+                        >PPV
+                      </a>
+                      <!-- <ul class="submenu">
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL > PPV"
                       >
                         <span class="waves-effect">
                           STS
@@ -381,15 +386,17 @@
                           <span class="float-right menu-arrow"></span> </span
                       ></a>
                     </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#"
-                    >P400
-                    <span class="float-right menu-arrow"
-                      ><i class="mdi mdi-chevron-right"></i></span
-                  ></a>
-                  <ul class="submenu">
+                  </ul> -->
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-P400-QC"
+                        >P400
+                      </a>
+                      <!-- <ul class="submenu">
                     <li>
                       <a
                         href="#"
@@ -414,15 +421,17 @@
                           <span class="float-right menu-arrow"></span> </span
                       ></a>
                     </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#"
-                    >SLL
-                    <span class="float-right menu-arrow"
-                      ><i class="mdi mdi-chevron-right"></i></span
-                  ></a>
-                  <ul class="submenu">
+                  </ul> -->
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-SLL-QC"
+                        >SLL
+                      </a>
+                      <!-- <ul class="submenu">
                     <li>
                       <a
                         href="#"
@@ -459,45 +468,210 @@
                           <span class="float-right menu-arrow"></span> </span
                       ></a>
                     </li>
+                  </ul> -->
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="submenu">
+                <li>
+                  <a href="javascript:void(0);" class="waves-effect">
+                    <span class="float-right menu-arrow"
+                      ><i class="mdi mdi-chevron-right"></i></span
+                    >Vessel</a
+                  >
+
+                  <ul class="submenu">
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL > GTI"
+                        >CHARLOTTE MAERSK
+                      </a>
+                      <!-- <ul class="submenu">
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-GTI-QC"
+                      >
+                        <span class="waves-effect">
+                          QC
+                          <span class="float-right menu-arrow"></span> </span
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-GTI-RMGC"
+                      >
+                        <span class="waves-effect">
+                          RMGC
+                          <span class="float-right menu-arrow"></span> </span
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-GTI-RTG"
+                      >
+                        <span class="waves-effect">
+                          RTG
+                          <span class="float-right menu-arrow"></span> </span
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-GTI-TT"
+                      >
+                        <span class="waves-effect">
+                          TT
+                          <span class="float-right menu-arrow"></span> </span
+                      ></a>
+                    </li>
+                  </ul> -->
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL > PPV"
+                        >RDO FAVOUR
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="submenu">
+                <li>
+                  <a href="javascript:void(0);" class="waves-effect">
+                    <span class="float-right menu-arrow"
+                      ><i class="mdi mdi-chevron-right"></i></span
+                    >WareHouse</a
+                  >
+                  <ul class="submenu">
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL > GTI"
+                        >Pune ICD
+                      </a>
+                      <!-- <ul class="submenu">
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-GTI-QC"
+                      >
+                        <span class="waves-effect">
+                          QC
+                          <span class="float-right menu-arrow"></span> </span
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-GTI-RMGC"
+                      >
+                        <span class="waves-effect">
+                          RMGC
+                          <span class="float-right menu-arrow"></span> </span
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-GTI-RTG"
+                      >
+                        <span class="waves-effect">
+                          RTG
+                          <span class="float-right menu-arrow"></span> </span
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL-GTI-TT"
+                      >
+                        <span class="waves-effect">
+                          TT
+                          <span class="float-right menu-arrow"></span> </span
+                      ></a>
+                    </li>
+                  </ul> -->
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL > PPV"
+                        >ROSS
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="submenu">
+                <li>
+                  <a href="javascript:void(0);" class="waves-effect">
+                    <span class="float-right menu-arrow"
+                      ><i class="mdi mdi-chevron-right"></i></span
+                    >Container</a
+                  >
+                  <ul class="submenu">
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL > GTI"
+                        >Dry Cargo
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        @click="selectedItem"
+                        class="waves-effect"
+                        aria-label="TERMINAL > PPV"
+                        >Reefer
+                      </a>
+                    </li>
                   </ul>
                 </li>
               </ul>
             </li>
+            <!-- <li>
+              <a href="#" class="waves-effect">
+                <i class="icon-accelerator"></i
+                ><span class="badge badge-success badge-pill float-right"
+                  >9+</span
+                >z
+                <span> Dashboard </span>
+              </a>
+            </li> -->
 
-            <li>
-              <a href="#" class="waves-effect"
-                ><i class="icon-paper-sheet"></i
-                ><span>
-                  Assets
-                  <span class="float-right menu-arrow"
-                    ><i class="mdi mdi-chevron-right"></i
-                  ></span> </span
-              ></a>
-              <ul class="submenu">
-                <li>
-                  <a href="#" @click="selectedItem" aria-label="Assets-QC"
-                    >QC</a
-                  >
-                </li>
-                <li><a href="#">RTG</a></li>
-                <li><a href="#">TT</a></li>
-                <li><a href="#">ARMG</a></li>
-                <li><a href="#">SC</a></li>
-                <li><a href="#">SQC</a></li>
-                <li><a href="#">EH</a></li>
-                <li><a href="#">RS</a></li>
-                <li><a href="#">SV</a></li>
-                <li><a href="#">AGV</a></li>
-                <li><a href="#">RGC</a></li>
-                <li><a href="#">TL</a></li>
-                <li><a href="#">RMGC</a></li>
-                <li><a href="#">FL</a></li>
-                <li><a href="#">HOPPER</a></li>
-                <li><a href="#">MHC</a></li>
-                <li><a href="#">MHP</a></li>
-                <li><a href="#">GENERIC</a></li>
-              </ul>
-            </li>
             <!-- <li class="menu-title">Components</li>
 
             <li>
@@ -648,16 +822,18 @@
     <!-- ============================================================== -->
     <!-- Start right Content here -->
     <!-- ============================================================== -->
-    <Dashboard :msg="selected" v-if="selected === ''" />
-    <Dashboard :msg="selected" v-if="selected === 'TERMINAL-GTI-QC'" />
+    <Homepage :msg="selected" v-if="selected === ''" />
+    <Dashboard :msg="selected" v-if="selected === 'TERMINAL > GTI'" />
     <DashboardTerminalPPVSTSvue
       :msg="selected"
-      v-if="selected === 'TERMINAL-PPV-STS'"
+      v-if="selected === 'TERMINAL > PPV'"
     />
     <DashboardTerminalAssetsQC
       :msg="selected"
-      v-if="selected === 'Assets-QC'"
+      v-if="selected === 'Assets > QC'"
     />
+
+    <Terminal v-if="selected === 'TERMINAL '" />
 
     <!-- ============================================================== -->
     <!-- End Right content here -->
@@ -670,12 +846,16 @@
   import Dashboard from "./Dashboard.vue";
   import DashboardTerminalPPVSTSvue from "./DashboardTerminalPPVSTS.vue";
   import DashboardTerminalAssetsQC from "./DashboardTerminalAssetsQC.vue";
+  import Homepage from "./Homepage.vue";
+  import Terminal from "./Terminal.vue";
   // import DashboardTerminalRMGC from "./Dashboard.vue";
   export default {
     components: {
       Dashboard,
       DashboardTerminalPPVSTSvue,
       DashboardTerminalAssetsQC,
+      Homepage,
+      Terminal,
       // DashboardTerminalRMGC,
     },
     data() {

@@ -133,7 +133,7 @@
         </div>
 
         <div class="row">
-          <div class="col-xl-8">
+          <div class="col-xl-4">
             <div class="card m-b-30">
               <div class="card-body">
                 <h4 class="mt-0 header-title mb-4">Energy Consumption</h4>
@@ -142,6 +142,23 @@
                   height="350"
                   :options="chartOptionsstacked"
                   :series="seriesstacked"
+                />
+                <!-- <div
+                  id="morris-area-example"
+                  class="morris-charts morris-chart-height"
+                ></div> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="card m-b-30">
+              <div class="card-body">
+                <h4 class="mt-0 header-title mb-4">Fuel Consumption</h4>
+                <apexcharts
+                  type="bar"
+                  height="350"
+                  :options="chartOptionsstacked"
+                  :series="seriesstackedfuel"
                 />
                 <!-- <div
                   id="morris-area-example"
@@ -178,7 +195,7 @@
           <div class="col-xl-4">
             <div class="card m-b-30">
               <div class="card-body">
-                <h4 class="mt-0 header-title mb-4">FIM Suggestions</h4>
+                <h4 class="mt-0 header-title mb-4">Improvement Initiatives</h4>
                 <div class="friends-suggestions">
                   <a href="#" class="friends-suggestions-list">
                     <div class="border-bottom position-relative">
@@ -462,12 +479,14 @@
           },
         ],
         options: {},
-        seriesdonut: [44, 55, 41, 17, 15],
+        seriesdonut: [3, 57, 40], //series -3 is green /renewable , 1-disel red ,2 yellow-electric
         chartOptionsdonut: {
+          labels: ["Diesel", "Electric", "Renewable"],
           chart: {
             type: "donut",
             foreColor: "#FFFFFF",
           },
+          colors: ["#1f0000", "#c9e423", "#379237"],
           responsive: [
             {
               breakpoint: 480,
@@ -564,31 +583,29 @@
             },
           },
         },
+        seriesstackedfuel: [
+          {
+            name: "Diesel Consumption(Litres)",
+            data: [6590, 6235, 5567, 6476, 6515, 6590, 5848],
+          },
+        ],
         seriesstacked: [
           {
-            name: "Marine Sprite",
-            data: [44, 55, 41, 37, 22, 43, 21],
+            name: "Reefer Electricity Consumption (KWH)",
+            data: [18102, 14150, 15433, 19215, 17518, 16923, 16601],
           },
           {
-            name: "Striking Calf",
-            data: [53, 32, 33, 52, 13, 43, 32],
+            name: "Other Electricity Consuption (KWH)",
+            data: [11734, 11306, 9914, 10277, 10443, 10127, 9385],
           },
-          {
-            name: "Tank Picture",
-            data: [12, 17, 11, 9, 15, 11, 20],
-          },
-          {
-            name: "Bucket Slope",
-            data: [9, 7, 5, 8, 6, 9, 4],
-          },
-          {
-            name: "Reborn Kid",
-            data: [25, 12, 19, 32, 25, 24, 10],
-          },
+          // {
+          //   name: "Diesel Consumption(Litres)",
+          //   data: [6590, 6235, 5567, 6476, 6515, 6590, 5848],
+          // },
         ],
         chartOptionsstacked: {
           title: {
-            text: "hello",
+            text: "Diesel Consumption(Litres)",
             align: "left",
             margin: 10,
             offsetX: 0,
@@ -611,9 +628,11 @@
           },
           chart: {
             type: "bar",
-            height: 350,
+            height: "auto",
+            width: "10%",
             stacked: true,
-            foreColor: "#FFFFFF",
+            // foreColor: "#FFFFFF",
+            background: "#fff",
           },
           plotOptions: {
             bar: {
@@ -638,7 +657,7 @@
           //   text: "",
           // },
           xaxis: {
-            categories: [2008, 2009, 2010, 2011, 2012, 2013, 2014],
+            categories: [2014, 2015, 2016, 2017, 2018, 2019, 2020],
             labels: {
               formatter: function (val) {
                 return val + "K";
@@ -647,7 +666,90 @@
           },
           yaxis: {
             title: {
-              text: "test",
+              text: "",
+            },
+          },
+          tooltip: {
+            y: {
+              formatter: function (val) {
+                return val + "K";
+              },
+            },
+          },
+          fill: {
+            opacity: 1,
+          },
+          legend: {
+            position: "top",
+            horizontalAlign: "left",
+            offsetX: 40,
+            text: "white",
+          },
+        },
+        chartOptionsstackedfuel: {
+          title: {
+            text: "Diesel Consumption(Litres)",
+            align: "left",
+            margin: 10,
+            offsetX: 0,
+            offsetY: 0,
+            floating: false,
+            style: {
+              fontSize: "14px",
+              fontWeight: "bold",
+              fontFamily: undefined,
+              color: "#263238",
+            },
+          },
+
+          colors: ["#2E93fA"],
+          style: {
+            fontSize: "14px",
+            fontFamily: "Helvetica, Arial, sans-serif",
+            fontWeight: "bold",
+            colors: "#2E93fA",
+          },
+          chart: {
+            type: "bar",
+            height: "auto",
+            width: "10%",
+            stacked: true,
+            // foreColor: "#FFFFFF",
+            background: "#fff",
+          },
+          plotOptions: {
+            bar: {
+              horizontal: true,
+              dataLabels: {
+                total: {
+                  enabled: true,
+                  offsetX: 0,
+                  style: {
+                    fontSize: "13px",
+                    fontWeight: 900,
+                  },
+                },
+              },
+            },
+          },
+          stroke: {
+            width: 1,
+            colors: ["#fff"],
+          },
+          // title: {
+          //   text: "",
+          // },
+          xaxis: {
+            categories: [2014, 2015, 2016, 2017, 2018, 2019, 2020],
+            labels: {
+              formatter: function (val) {
+                return val + "Litres";
+              },
+            },
+          },
+          yaxis: {
+            title: {
+              text: "",
             },
           },
           tooltip: {

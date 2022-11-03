@@ -1625,7 +1625,19 @@ dt {
   .form-control::placeholder {
   color: #ced4da;
 }
-
+.title-large {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  /* text-align: center; */
+  /* flex-basis: fit-content; */
+  margin: -40px;
+  color: #f6f6f6;
+}
+.padding-1 {
+  padding-bottom: 20px;
+}
 .left-side-menu-light
   .navbar-custom
   .notification-list

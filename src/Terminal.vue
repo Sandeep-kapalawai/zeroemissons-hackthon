@@ -21,72 +21,45 @@
           <!-- end row -->
         </div>
         <!-- end page-title -->
-
-        <!-- <div class="row">
-          <div class="col-sm-6 col-xl-3">
-            <div class="card">
-              <div class="card-heading p-4">
-                <div class="mini-stat-icon float-right">
-                  <i class="mdi mdi-cube-outline bg-primary text-white"></i>
-                </div>
-                <div>
-                  <h5 class="font-16">Total Yearly Electricity Consumption</h5>
-                </div>
-                <h3 class="mt-4">17M KWH</h3>
-                <div class="progress mt-4" style="height: 4px">
-                  <div
-                    class="progress-bar bg-primary"
-                    role="progressbar"
-                    style="width: 5%"
-                    aria-valuenow="75"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-                <p class="text-muted mt-2 mb-0">
-                  Reduced by <span class="float-right">5%</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-xl-3">
+        <div class="font-20 center padding-1">Terminal Summary</div>
+        <div class="row">
+          <div class="col-sm-12 col-xl-4">
             <div class="card">
               <div class="card-heading p-4">
                 <div class="mini-stat-icon float-right">
                   <i class="mdi mdi-briefcase-check bg-success text-white"></i>
                 </div>
                 <div>
-                  <h5 class="font-16">Green Energy Score</h5>
+                  <h5 class="font-16">Scope 1 Direct</h5>
                 </div>
-                <h3 class="mt-4">80/100</h3>
+                <h3 class="mt-4">270KT CO<sup>2</sup></h3>
                 <div class="progress mt-4" style="height: 4px">
                   <div
                     class="progress-bar bg-success"
                     role="progressbar"
-                    style="width: 5%"
+                    style="width: 9%"
                     aria-valuenow="88"
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
                 </div>
                 <p class="text-muted mt-2 mb-0">
-                  Improved by<span class="float-right">5%</span>
+                  Increased by<span class="float-right">9%</span>
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="col-sm-6 col-xl-3">
+          <div class="col-sm-6 col-xl-4">
             <div class="card">
               <div class="card-heading p-4">
                 <div class="mini-stat-icon float-right">
                   <i class="mdi mdi-tag-text-outline bg-warning text-white"></i>
                 </div>
                 <div>
-                  <h5 class="font-16">Total Yearly C0<sup>2</sup> Emission</h5>
+                  <h5 class="font-16">Scope 2 Indirect</h5>
                 </div>
-                <h3 class="mt-4">200 MILLION TONNES</h3>
+                <h3 class="mt-4">190KT CO<sup>2</sup></h3>
                 <div class="progress mt-4" style="height: 4px">
                   <div
                     class="progress-bar bg-warning"
@@ -104,16 +77,16 @@
             </div>
           </div>
 
-          <div class="col-sm-6 col-xl-3">
+          <div class="col-sm-6 col-xl-4">
             <div class="card">
               <div class="card-heading p-4">
                 <div class="mini-stat-icon float-right">
                   <i class="mdi mdi-buffer bg-danger text-white"></i>
                 </div>
                 <div>
-                  <h5 class="font-16">Zero Emission Initiatives</h5>
+                  <h5 class="font-16">Scope 3 Indirect External</h5>
                 </div>
-                <h3 class="mt-4">3</h3>
+                <h3 class="mt-4">100KT CO<sup>2</sup></h3>
                 <div class="progress mt-4" style="height: 4px">
                   <div
                     class="progress-bar bg-danger"
@@ -130,77 +103,104 @@
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
+
+        <div class="row">
+          <div class="col-xl-6">
+            <div class="card m-b-30">
+              <div class="card-body">
+                <h4 class="mt-0 header-title mb-4">Energy Consumption</h4>
+
+                <apexcharts
+                  width="500"
+                  height="350"
+                  type="bar"
+                  :options="chartOptions"
+                  :series="series"
+                ></apexcharts>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="card m-b-30">
+              <div class="card-body">
+                <h4 class="mt-0 header-title mb-4">Diesel Consumption</h4>
+
+                <apexcharts
+                  width="500"
+                  height="350"
+                  type="bar"
+                  :options="chartOptions2"
+                  :series="series2"
+                ></apexcharts>
+              </div>
+            </div>
+          </div>
+          <!-- end col -->
+
+          <!-- end col -->
+        </div>
 
         <!-- end row -->
 
         <!-- START ROW -->
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-xl-12">
             <div class="card m-b-30">
               <div class="card-body">
-                <h4 class="mt-0 header-title mb-4">
-                  Asset Performance (Emissions)
-                </h4>
+                <h4 class="mt-0 header-title mb-4">Asset Details</h4>
                 <div class="table-responsive">
                   <table class="table table-hover">
                     <thead>
                       <tr>
-                        <th scope="col">Manufacturer</th>
-                        <th scope="col">Scope 1 (tCo2e)</th>
-                        <th scope="col">Scope 2 (Market based tCo2e)</th>
-                        <th scope="col">Scope 3 (Suppliers)</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Energy Type</th>
+                        <th scope="col"></th>
+                        <th scope="col">Count</th>
 
-                        <th scope="col">Total Emissions</th>
-                        <th scope="col">Year</th>
+                        <th scope="col">Location</th>
+                        <th scope="col" colspan="2">Last Modified</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
+                        <td>Quay Crane - QC</td>
                         <td>
-                          <a
-                            href="https://www.cargotec.com/en/sustainability/sustainability-at-our-company/performance/"
-                            target="_blank"
-                            >Kalmar</a
-                          >
-                          <button
-                            type="button"
-                            class="btn btn-sm btn-primary"
-                            @click="renderModal"
-                          >
-                            Primary button
-                          </button>
+                          <span>Diesel</span>
                         </td>
                         <td>
-                          <span>21,300</span>
+                          <div class="circle-brown"></div>
                         </td>
-                        <td>
-                          <div>20,200</div>
-                        </td>
-                        <td>6139000</td>
+                        <td>10</td>
 
-                        <td>6180500</td>
-                        <td>2021</td>
+                        <td>India</td>
+                        <td>10/10/2022</td>
                       </tr>
-
                       <tr>
+                        <td>Rubber Tyred Gantry - RTG</td>
                         <td>
-                          <a
-                            href="https://investors.konecranes.com/sites/default/files/AR2021/sustainability_report_2021.pdf"
-                            target="_blank"
-                            >Konecranes</a
-                          >
+                          <span> Hybrid</span>
                         </td>
                         <td>
-                          <span>44500</span>
+                          <div class="circle-green"></div>
                         </td>
-                        <td>
-                          <div>14400</div>
-                        </td>
-                        <td>5158600</td>
+                        <td>36</td>
 
-                        <td>5217500</td>
-                        <td>2021</td>
+                        <td>India</td>
+                        <td>10/10/2022</td>
+                      </tr>
+                      <tr>
+                        <td>Terminal Tractor - TT</td>
+                        <td>
+                          <span> Brown</span>
+                        </td>
+                        <td>
+                          <div class="circle-brown"></div>
+                        </td>
+                        <td>126</td>
+
+                        <td>India</td>
+                        <td>10/10/2022</td>
                       </tr>
                     </tbody>
                   </table>
@@ -208,15 +208,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- 
-        <apexcharts
-          width="500"
-          height="350"
-          type="bar"
-          :options="chartOptions"
-          :series="series"
-        ></apexcharts>
+
 
         <apexcharts
           width="380"
@@ -237,12 +231,6 @@
           :series="series"
         ></apexcharts>
 
-        <apexcharts
-          type="rangeArea"
-          height="350"
-          :options="chartOptionsrange"
-          :series="series"
-        ></apexcharts>
         <h1>test</h1> -->
 
         <!-- END ROW -->
@@ -263,57 +251,133 @@
   <!-- ============================================================== -->
 </template>
 <script>
-  // import VueApexCharts from "vue3-apexcharts";
+  import VueApexCharts from "vue3-apexcharts";
+  import "vue-awesome/icons";
 
   // import Icon from "vue-awesome/components/Icon";
 
   export default {
-    name: "DashboardTerminalAssetsQC",
+    name: "Dashboard",
     props: {
       msg: String,
     },
-    components: {},
+    components: {
+      apexcharts: VueApexCharts,
+      // "v-icon": Icon,
+    },
     data: function () {
       return {
         fimsuggestionSelected: "",
-        showModal: false,
         chartOptions: {
           chart: {
             id: "basic-bar",
+            foreColor: "#FFFFFF",
           },
           xaxis: {
-            categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998],
+            categories: [
+              "GTI",
+              "PPV",
+              "P400",
+              "SSL",
+              "SCCT",
+              "TC1",
+              "VAL",
+              "ALR",
+            ],
           },
           yaxis: {
-            categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998],
+            categories: [10, 20, 30, 40, 50, 10, 30],
+            labels: {
+              formatter: (val) => {
+                return val + "K";
+              },
+            },
           },
         },
         chartOptions2: {
           chart: {
             id: "basic-bar3",
+            foreColor: "#FFFFFF",
           },
+          colors: ["#c9e423"],
           xaxis: {
-            categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998],
+            categories: [
+              "GTI",
+              "PPV",
+              "P400",
+              "SSL",
+              "SCCT",
+              "TC1",
+              "VAL",
+              "ALR",
+            ],
           },
         },
+        series2: [
+          {
+            name: "series-1",
+            data: [30, 10, 45, 50, 10, 20, 40, 91],
+          },
+        ],
         series: [
           {
             name: "series-1",
             data: [30, 40, 45, 50, 49, 60, 70, 91],
           },
-
-          {
-            name: "series-2",
-            data: [30, 40, 45, 50, 49, 10, 70, 91],
-          },
         ],
         options: {},
-        seriesdonut: [44, 55, 41, 17, 15],
-        chartOptionsdonut: {
+        seriesdonutscope1: [10, 15, 20, 50], //series -3 is green /renewable , 1-disel red ,2 yellow-electric
+        chartOptionsdonutscope1: {
+          labels: ["Terminal", "WareHouse", "Container", "Vessel"],
           chart: {
             type: "donut",
             foreColor: "#FFFFFF",
           },
+          colors: ["#1f0000", "#c9e423", "#379237"],
+          responsive: [
+            {
+              breakpoint: 480,
+              options: {
+                chart: {
+                  width: 200,
+                },
+                legend: {
+                  position: "bottom",
+                },
+              },
+            },
+          ],
+        },
+        seriesdonutscope2: [45, 20, 20, 15], //series -3 is green /renewable , 1-disel red ,2 yellow-electric
+        chartOptionsdonutscope2: {
+          labels: ["Terminal", "WareHouse", "Container", "Vessel"],
+          chart: {
+            type: "donut",
+            foreColor: "#FFFFFF",
+          },
+          colors: ["#1f0000", "#c9e423", "#379237"],
+          responsive: [
+            {
+              breakpoint: 480,
+              options: {
+                chart: {
+                  width: 200,
+                },
+                legend: {
+                  position: "bottom",
+                },
+              },
+            },
+          ],
+        },
+        seriesdonutscope3: [45, 20, 20, 15], //series -3 is green /renewable , 1-disel red ,2 yellow-electric
+        chartOptionsdonutscope3: {
+          labels: ["Suppliers", "Service Providers", "Vendors", "IT"],
+          chart: {
+            type: "donut",
+            foreColor: "#FFFFFF",
+          },
+          colors: ["#1f0000", "#c9e423", "#379237"],
           responsive: [
             {
               breakpoint: 480,
@@ -412,29 +476,21 @@
         },
         seriesstacked: [
           {
-            name: "Marine Sprite",
-            data: [44, 55, 41, 37, 22, 43, 21],
+            name: "Reefer Electricity Consumption (KWH)",
+            data: [18102, 14150, 15433, 19215, 17518, 16923, 16601],
           },
           {
-            name: "Striking Calf",
-            data: [53, 32, 33, 52, 13, 43, 32],
+            name: "Other Electricity Consuption (KWH)",
+            data: [11734, 11306, 9914, 10277, 10443, 10127, 9385],
           },
-          {
-            name: "Tank Picture",
-            data: [12, 17, 11, 9, 15, 11, 20],
-          },
-          {
-            name: "Bucket Slope",
-            data: [9, 7, 5, 8, 6, 9, 4],
-          },
-          {
-            name: "Reborn Kid",
-            data: [25, 12, 19, 32, 25, 24, 10],
-          },
+          // {
+          //   name: "Diesel Consumption(Litres)",
+          //   data: [6590, 6235, 5567, 6476, 6515, 6590, 5848],
+          // },
         ],
         chartOptionsstacked: {
           title: {
-            text: "hello",
+            text: "",
             align: "left",
             margin: 10,
             offsetX: 0,
@@ -457,9 +513,11 @@
           },
           chart: {
             type: "bar",
-            height: 350,
+            height: "auto",
+            width: "10%",
             stacked: true,
-            foreColor: "#FFFFFF",
+            // foreColor: "#FFFFFF",
+            background: "#fff",
           },
           plotOptions: {
             bar: {
@@ -484,7 +542,7 @@
           //   text: "",
           // },
           xaxis: {
-            categories: [2008, 2009, 2010, 2011, 2012, 2013, 2014],
+            categories: [2014, 2015, 2016, 2017, 2018, 2019, 2020],
             labels: {
               formatter: function (val) {
                 return val + "K";
@@ -493,7 +551,7 @@
           },
           yaxis: {
             title: {
-              text: "test",
+              text: "",
             },
           },
           tooltip: {
@@ -535,58 +593,73 @@
         console.log(event.target.innerText, "name");
         this.fimsuggestionSelected = event.target.innerText;
       },
-
-      renderModal() {
-        event.preventDefault();
-        this.showModal = true;
-      },
     },
     computed: {
       renderfimDescription() {
-        if (this.fimsuggestionSelected === "Crane Optimization") {
-          return "identified several measures to optimize the energy consumption of the cranes -AC Control, Motor Heater Control, Replace Service Brakes, Replace Spreader Cable Reel Motor";
-        } else if (
-          this.fimsuggestionSelected === "HVAC Control/Building Automation"
+        if (
+          this.fimsuggestionSelected ===
+          "Rubber Tyred Gantry Crane Optimization"
         ) {
-          return "Installing a new building automation system (BAS) to integrate with the thermostats being provided with the new equipment. This will allow monitoring of the HVAC systems from a centralized dashboard. Additionally, schedules and setpoints can be adjusted at the building automation system front end and pushed to the individual thermostats. This will facilitate optimization of setpoints, and equipment operating schedules based on actual occupancy of building spaces.";
-        } else if (this.fimsuggestionSelected === "Exterior Lighting Control") {
-          return "Replacing the original high pressure sodium fixtures with new LED fixtures. This measure is a quantification of the savings potential. Additional savings can be captured through the dimming feature in other areas.";
+          return "Concept of substituting less efficient big capacity Diesel Generator, which used to feed the RTG power during operation with an energy storage battery system & better efficient smaller capacity Diesel Generator to provide a positive recharge cycle, which means DG will be used for only charging the batteries to compensate the loss of energy on account of “RTG electro-mechanical overall efficiency";
+        } else if (this.fimsuggestionSelected === "Transformer optimization") {
+          return "Transformer paralleling operation would be governed by programming the RTU panel with two modes of operation - Automatic and Manual mode. Transformer Optimization FIM reduces losses in the operation of substations E2 and E3 substation";
+        } else if (this.fimsuggestionSelected === "Reefer Optimization") {
+          return "Reefer Optimization FIM smoothens peaks in terminal power consumption and to reduce energy consumption in the reefer area, which is responsible for almost 2/3 of the entire terminal electricity consumption.";
+        } else if (this.fimsuggestionSelected === "Distributed Energy System") {
+          return "Distributed energy system involves the design, engineering, supply, installation, commissioning, supervision, and services for a distributed energy system comprising of a cantilever based 1.5MWp DC solar system on the piers, a containerized battery energy storage system of 2.7MWh (3.6MWh Nameplate), a microgrid controller and digital solution";
+        } else if (this.fimsuggestionSelected === "Green Power Purchase") {
+          return "Green power refers specifically to electricity supplied from a subset of renewable resources that provide the highest environmental benefit. Green power provides benefits both directly and indirectly to the buyer. Organizations interested in buying green power can go for options like green power procurement process, different green power supply options, benefits of green power purchasing, as well as information on how to capture the greatest benefit from your purchase.";
         }
         return "";
       },
-      renderfimbenefitsitemone() {
-        if (this.fimsuggestionSelected === "Crane Optimization") {
-          return "Energy Cost Savings";
-        } else if (
-          this.fimsuggestionSelected === "HVAC Control/Building Automation"
+      renderfimlistitemone() {
+        if (
+          this.fimsuggestionSelected ===
+          "Rubber Tyred Gantry Crane Optimization"
         ) {
+          return "Fuel savings";
+        } else if (this.fimsuggestionSelected === "Transformer optimization") {
           return "Energy cost savings";
-        } else if (this.fimsuggestionSelected === "Exterior Lighting Control") {
+        } else if (this.fimsuggestionSelected === "Reefer Optimization") {
           return "Energy cost savings";
+        } else if (this.fimsuggestionSelected === "Distributed Energy System") {
+          return " Energy cost savings";
+        } else if (this.fimsuggestionSelected === "Green Power Purchase") {
+          return "Environmental benefits";
         }
         return "";
       },
-      renderfimbenefitsitemtwo() {
-        if (this.fimsuggestionSelected === "Crane Optimization") {
-          return "Carbon Reduction";
-        } else if (
-          this.fimsuggestionSelected === "HVAC Control/Building Automation"
+      renderfimlistitemtwo() {
+        if (
+          this.fimsuggestionSelected ===
+          "Rubber Tyred Gantry Crane Optimization"
         ) {
-          return "Optimization of investment";
-        } else if (this.fimsuggestionSelected === "Exterior Lighting Control") {
-          return "Carbon Reduction";
+          return "Carbon reduction";
+        } else if (this.fimsuggestionSelected === "Transformer optimization") {
+          return "Carbon reduction";
+        } else if (this.fimsuggestionSelected === "Reefer Optimization") {
+          return "Carbon reduction";
+        } else if (this.fimsuggestionSelected === "Distributed Energy System") {
+          return "Carbon reduction";
+        } else if (this.fimsuggestionSelected === "Green Power Purchase") {
+          return "Economic benefits to the purchasing organization";
         }
         return "";
       },
-      renderfimbenefitsitemthree() {
-        if (this.fimsuggestionSelected === "Crane Optimization") {
-          return "Reduce overcooling of E House and PLC room";
-        } else if (
-          this.fimsuggestionSelected === "HVAC Control/Building Automation"
+      renderfimlistitemthree() {
+        if (
+          this.fimsuggestionSelected ===
+          "Rubber Tyred Gantry Crane Optimization"
         ) {
-          return " Platform base for future system integration";
-        } else if (this.fimsuggestionSelected === "Exterior Lighting Control") {
-          return " No implementation costs";
+          return "Productivity capture";
+        } else if (this.fimsuggestionSelected === "Transformer optimization") {
+          return "Optimization of investment ";
+        } else if (this.fimsuggestionSelected === "Reefer Optimization") {
+          return "Reduced overall peak load of terminal";
+        } else if (this.fimsuggestionSelected === "Distributed Energy System") {
+          return "Optimization of investment ";
+        } else if (this.fimsuggestionSelected === "Green Power Purchase") {
+          return "Development of domestic energy resources";
         }
         return "";
       },

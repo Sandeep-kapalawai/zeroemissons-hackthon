@@ -133,7 +133,7 @@
         </div>
 
         <div class="row">
-          <div class="col-xl-8">
+          <div class="col-xl-4">
             <div class="card m-b-30">
               <div class="card-body">
                 <h4 class="mt-0 header-title mb-4">
@@ -145,10 +145,19 @@
                   :options="chartOptionsstacked"
                   :series="seriesstacked"
                 />
-                <!-- <div
-                  id="morris-area-example"
-                  class="morris-charts morris-chart-height"
-                ></div> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="card m-b-30">
+              <div class="card-body">
+                <h4 class="mt-0 header-title mb-4">Fuel Consumption</h4>
+                <apexcharts
+                  type="bar"
+                  height="300"
+                  :options="chartOptionsstackedfuel"
+                  :series="seriesstackedfuel"
+                />
               </div>
             </div>
           </div>
@@ -180,50 +189,8 @@
           <div class="col-xl-4">
             <div class="card m-b-30">
               <div class="card-body">
-                <h4 class="mt-0 header-title mb-4">FIM Suggestions</h4>
+                <h4 class="mt-0 header-title mb-4">Improvement Initiatives</h4>
                 <div class="friends-suggestions">
-                  <a href="#" class="friends-suggestions-list">
-                    <div class="border-bottom position-relative">
-                      <!-- <div class="float-left mb-0 mr-3">
-                        <img
-                          src="assets/images/user-3.jpg"
-                          alt=""
-                          class="rounded-circle thumb-md"
-                        />
-                      </div> -->
-                      <div class="suggestion-icon float-right mt-2 pt-1">
-                        <i class="mdi mdi-forward"></i>
-                      </div>
-
-                      <div class="desc">
-                        <h5 class="font-14 mb-1 pt-2" @click="fimsuggestion">
-                          Rubber Tyred Gantry Crane Optimization
-                        </h5>
-                        <p class="text-muted">&nbsp;</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#" class="friends-suggestions-list">
-                    <div class="border-bottom position-relative">
-                      <!-- <div class="float-left mb-0 mr-3">
-                        <img
-                          src="assets/images/user-3.jpg"
-                          alt=""
-                          class="rounded-circle thumb-md"
-                        />
-                      </div> -->
-                      <div class="suggestion-icon float-right mt-2 pt-1">
-                        <i class="mdi mdi-forward"></i>
-                      </div>
-
-                      <div class="desc">
-                        <h5 class="font-14 mb-1 pt-2" @click="fimsuggestion">
-                          Transformer optimization
-                        </h5>
-                        <p class="text-muted">&nbsp;</p>
-                      </div>
-                    </div>
-                  </a>
                   <a href="#" class="friends-suggestions-list">
                     <div class="border-bottom position-relative">
                       <!-- <div class="float-left mb-0 mr-3">
@@ -339,7 +306,7 @@
 
         <!-- START ROW -->
         <div class="row">
-          <div class="col-xl-12">
+          <div class="col-xl-7">
             <div class="card m-b-30">
               <div class="card-body">
                 <h4 class="mt-0 header-title mb-4">Asset Details</h4>
@@ -353,7 +320,9 @@
                         <th scope="col">Count</th>
 
                         <th scope="col">Location</th>
-                        <th scope="col" colspan="2">Last Modified</th>
+                        <th scope="col" colspan="2">
+                          Zero Emission Recommendation
+                        </th>
                       </tr>
                     </thead>
                     <tbody>
@@ -368,7 +337,15 @@
                         <td>10</td>
 
                         <td>India</td>
-                        <td>10/10/2022</td>
+                        <td>
+                          <button
+                            type="button"
+                            class="btn btn-l btn-primary"
+                            @click="selectedView"
+                          >
+                            View
+                          </button>
+                        </td>
                       </tr>
                       <tr>
                         <td>Rubber Tyred Gantry - RTG</td>
@@ -381,7 +358,11 @@
                         <td>36</td>
 
                         <td>India</td>
-                        <td>10/10/2022</td>
+                        <td>
+                          <button type="button" class="btn btn-l btn-primary">
+                            View
+                          </button>
+                        </td>
                       </tr>
                       <tr>
                         <td>Terminal Tractor - TT</td>
@@ -394,7 +375,11 @@
                         <td>126</td>
 
                         <td>India</td>
-                        <td>10/10/2022</td>
+                        <td>
+                          <button type="button" class="btn btn-l btn-primary">
+                            View
+                          </button>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -402,7 +387,18 @@
               </div>
             </div>
           </div>
+          <div class="col-xl-5" v-show="selectedOption === 'View'">
+            <apexcharts
+              width="500"
+              height="350"
+              type="treemap"
+              :options="chartOptionstree"
+              :series="seriestree"
+            ></apexcharts>
+          </div>
         </div>
+        <!-- <SparklineGraph /> -->
+
         <!-- 
         <apexcharts
           width="500"
@@ -458,6 +454,7 @@
 </template>
 <script>
   import VueApexCharts from "vue3-apexcharts";
+  // import SparklineGraph from "./SparklineGraph.vue";
   import "vue-awesome/icons";
 
   // import Icon from "vue-awesome/components/Icon";
@@ -469,11 +466,11 @@
     },
     components: {
       apexcharts: VueApexCharts,
-      // "v-icon": Icon,
     },
     data: function () {
       return {
         fimsuggestionSelected: "",
+        selectedOption: "",
         chartOptions: {
           chart: {
             id: "basic-bar",
@@ -623,6 +620,95 @@
           //   data: [6590, 6235, 5567, 6476, 6515, 6590, 5848],
           // },
         ],
+        seriesstackedfuel: [
+          {
+            name: "Diesel Consumption(Litres)",
+            data: [6590, 6235, 5567, 6476, 6515, 6590, 5848],
+          },
+        ],
+        chartOptionsstackedfuel: {
+          title: {
+            text: "Diesel Consumption(Litres)",
+            align: "left",
+            margin: 10,
+            offsetX: 0,
+            offsetY: 0,
+            floating: false,
+            style: {
+              fontSize: "14px",
+              fontWeight: "bold",
+              fontFamily: undefined,
+              color: "#263238",
+            },
+          },
+
+          colors: ["#2E93fA"],
+          style: {
+            fontSize: "14px",
+            fontFamily: "Helvetica, Arial, sans-serif",
+            fontWeight: "bold",
+            colors: "#2E93fA",
+          },
+          chart: {
+            type: "bar",
+            height: "auto",
+            width: "10%",
+            stacked: true,
+            // foreColor: "#FFFFFF",
+            background: "#fff",
+          },
+          plotOptions: {
+            bar: {
+              horizontal: true,
+              dataLabels: {
+                total: {
+                  enabled: true,
+                  offsetX: 0,
+                  style: {
+                    fontSize: "13px",
+                    fontWeight: 900,
+                  },
+                },
+              },
+            },
+          },
+          stroke: {
+            width: 1,
+            colors: ["#fff"],
+          },
+          // title: {
+          //   text: "",
+          // },
+          xaxis: {
+            categories: [2014, 2015, 2016, 2017, 2018, 2019, 2020],
+            labels: {
+              formatter: function (val) {
+                return val + "Litres";
+              },
+            },
+          },
+          yaxis: {
+            title: {
+              text: "",
+            },
+          },
+          tooltip: {
+            y: {
+              formatter: function (val) {
+                return val + "K";
+              },
+            },
+          },
+          fill: {
+            opacity: 1,
+          },
+          legend: {
+            position: "top",
+            horizontalAlign: "left",
+            offsetX: 40,
+            text: "white",
+          },
+        },
         chartOptionsstacked: {
           title: {
             text: "",
@@ -648,9 +734,11 @@
           },
           chart: {
             type: "bar",
-            height: 300,
+            height: "auto",
+            width: "10%",
             stacked: true,
-            foreColor: "#FFFFFF",
+            // foreColor: "#FFFFFF",
+            background: "#fff",
           },
           plotOptions: {
             bar: {
@@ -718,6 +806,104 @@
             color: "#263238",
           },
         },
+        seriestree: [
+          {
+            data: [
+              {
+                x: "New Delhi",
+                y: 218,
+              },
+              {
+                x: "Kolkata",
+                y: 149,
+              },
+              {
+                x: "Mumbai",
+                y: 184,
+              },
+              {
+                x: "Ahmedabad",
+                y: 55,
+              },
+              {
+                x: "Bangaluru",
+                y: 84,
+              },
+              {
+                x: "Pune",
+                y: 31,
+              },
+              {
+                x: "Chennai",
+                y: 70,
+              },
+              {
+                x: "Jaipur",
+                y: 30,
+              },
+              {
+                x: "Surat",
+                y: 44,
+              },
+              {
+                x: "Hyderabad",
+                y: 68,
+              },
+              {
+                x: "Lucknow",
+                y: 28,
+              },
+              {
+                x: "Indore",
+                y: 19,
+              },
+              {
+                x: "Kanpur",
+                y: 29,
+              },
+            ],
+          },
+        ],
+        chartOptionstree: {
+          legend: {
+            show: false,
+          },
+          chart: {
+            height: 350,
+            type: "treemap",
+          },
+          title: {
+            text: "Recommendations",
+            align: "center",
+
+            style: {
+              fontSize: "14px",
+              fontWeight: "bold",
+              fontFamily: undefined,
+              color: "#FFFFFF",
+            },
+          },
+          colors: [
+            "#3B93A5",
+            "#F7B844",
+            "#ADD8C7",
+            "#EC3C65",
+            "#CDD7B6",
+            "#C1F666",
+            "#D43F97",
+            "#1E5D8C",
+            "#421243",
+            "#7F94B0",
+            "#EF6537",
+            "#C0ADDB",
+          ],
+          plotOptions: {
+            treemap: {
+              distributed: true,
+              enableShades: false,
+            },
+          },
+        },
       };
     },
     methods: {
@@ -725,6 +911,11 @@
         event.preventDefault();
         console.log(event.target.innerText, "name");
         this.fimsuggestionSelected = event.target.innerText;
+      },
+      selectedView(event) {
+        event.preventDefault();
+        console.log(event.target.innerText, "name");
+        this.selectedOption = event.target.innerText;
       },
     },
     computed: {
