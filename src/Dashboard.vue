@@ -136,10 +136,12 @@
           <div class="col-xl-8">
             <div class="card m-b-30">
               <div class="card-body">
-                <h4 class="mt-0 header-title mb-4">Energy Consumption</h4>
+                <h4 class="mt-0 header-title mb-4">
+                  Electric Energy Consumption
+                </h4>
                 <apexcharts
                   type="bar"
-                  height="350"
+                  height="300"
                   :options="chartOptionsstacked"
                   :series="seriesstacked"
                 />
@@ -613,13 +615,13 @@
             data: [18102, 14150, 15433, 19215, 17518, 16923, 16601],
           },
           {
-            name: "Total Electricity Consuption (KWH)",
-            data: [29836, 25457, 25348, 29493, 27962, 27051, 25987],
+            name: "Other Electricity Consuption (KWH)",
+            data: [11734, 11306, 9914, 10277, 10443, 10127, 9385],
           },
-          {
-            name: "Diesel Consumption(Litres)",
-            data: [6590, 6235, 5567, 6476, 6515, 6590, 5848],
-          },
+          // {
+          //   name: "Diesel Consumption(Litres)",
+          //   data: [6590, 6235, 5567, 6476, 6515, 6590, 5848],
+          // },
         ],
         chartOptionsstacked: {
           title: {
@@ -646,7 +648,7 @@
           },
           chart: {
             type: "bar",
-            height: 350,
+            height: 300,
             stacked: true,
             foreColor: "#FFFFFF",
           },
