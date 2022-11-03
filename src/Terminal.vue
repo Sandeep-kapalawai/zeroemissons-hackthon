@@ -98,7 +98,7 @@
                   ></div>
                 </div>
                 <p class="text-muted mt-2 mb-0">
-                  Improved by <span class="float-right">30%</span>
+                  Improved by <span class="float-right">9%</span>
                 </p>
               </div>
             </div>

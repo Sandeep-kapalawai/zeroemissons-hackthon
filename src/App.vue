@@ -262,9 +262,13 @@
           <ul class="metismenu" id="side-menu">
             <!-- <li class="menu-title">Zero Emission Pathway</li> -->
             <li>
-              <a href="javascript:void(0);" class="waves-effect">
-                <span>
-                  Maersk
+              <a
+                href="javascript:void(0);"
+                class="waves-effect"
+                @click="selectedItem"
+              >
+                <span aria-label="Maersk"
+                  >Maersk
                   <span class="float-right menu-arrow"
                     ><i class="mdi mdi-chevron-right"></i
                   ></span> </span
@@ -822,7 +826,7 @@
     <!-- ============================================================== -->
     <!-- Start right Content here -->
     <!-- ============================================================== -->
-    <Homepage :msg="selected" v-if="selected === ''" />
+    <Homepage :msg="selected" v-if="selected === '' || selected === 'Maersk'" />
     <Dashboard :msg="selected" v-if="selected === 'TERMINAL > GTI'" />
     <DashboardTerminalPPVSTSvue
       :msg="selected"

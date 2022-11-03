@@ -98,7 +98,7 @@
                   ></div>
                 </div>
                 <p class="text-muted mt-2 mb-0">
-                  Improved by <span class="float-right">30%</span>
+                  Improved by <span class="float-right">9%</span>
                 </p>
               </div>
             </div>
@@ -146,8 +146,7 @@
                 <h4 class="mt-0 header-title mb-4">Scope 3 Distribution</h4>
                 <apexcharts
                   type="donut"
-                  height="350"
-                  :options="chartOptionsdonutscope33"
+                  :options="chartOptionsdonutscope34"
                   :series="seriesdonutscope3"
                 ></apexcharts>
               </div>
@@ -369,13 +368,8 @@
             },
           ],
         },
-        chartOptionsdonutscope33: {
-          labels: [
-            "Suppliers",
-            "Service Providers",
-            "Vendors",
-            "Information Technology",
-          ],
+        chartOptionsdonutscope34: {
+          labels: ["Suppliers", "Service", "Vendors", "IT"],
           chart: {
             type: "donut",
             foreColor: "#FFFFFF",
@@ -387,7 +381,46 @@
               options: {
                 chart: {
                   width: 200,
-                  height: 500,
+                },
+                legend: {
+                  position: "left",
+                },
+              },
+            },
+          ],
+        },
+        chartOptionsdonutscope33: {
+          labels: [
+            "Suppliers",
+            "Service Providers",
+            "Vendors",
+            "Information Technology",
+          ],
+          chart: {
+            type: "donut",
+            foreColor: "#FFFFFF",
+            background: "#fff",
+            animations: {
+              enabled: true,
+              easing: "easeinout",
+              speed: 800,
+              animateGradually: {
+                enabled: true,
+                delay: 150,
+              },
+              dynamicAnimation: {
+                enabled: true,
+                speed: 350,
+              },
+            },
+          },
+          colors: ["#FDA65D", "#CDFCF6", "#98A8F8", "#18978F"],
+          responsive: [
+            {
+              breakpoint: 480,
+              options: {
+                chart: {
+                  width: 200,
                 },
                 legend: {
                   position: "bottom",
@@ -398,7 +431,7 @@
         },
         seriesdonutscope3: [45, 20, 20, 15], //series -3 is green /renewable , 1-disel red ,2 yellow-electric
         chartOptionsdonutscope3: {
-          labels: ["Suppliers", "Service Providers", "Vendors", "IT"],
+          labels: ["Suppliers", "Service", "Vendors", "IT"],
           chart: {
             type: "donut",
             foreColor: "#FFFFFF",

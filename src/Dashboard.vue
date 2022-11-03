@@ -23,7 +23,7 @@
         <!-- end page-title -->
 
         <div class="row">
-          <div class="col-sm-6 col-xl-3">
+          <div class="col-sm-4 col-xl-3">
             <div class="card">
               <div class="card-heading p-4">
                 <div class="mini-stat-icon float-right">
@@ -50,7 +50,7 @@
             </div>
           </div>
 
-          <div class="col-sm-6 col-xl-3">
+          <div class="col-sm-4 col-xl-3">
             <div class="card">
               <div class="card-heading p-4">
                 <div class="mini-stat-icon float-right">
@@ -77,7 +77,7 @@
             </div>
           </div>
 
-          <div class="col-sm-6 col-xl-3">
+          <div class="col-sm-4 col-xl-3">
             <div class="card">
               <div class="card-heading p-4">
                 <div class="mini-stat-icon float-right">
@@ -86,7 +86,7 @@
                 <div>
                   <h5 class="font-16">Total Yearly C0<sup>2</sup> Emission</h5>
                 </div>
-                <h3 class="mt-4">151,276 tonnes</h3>
+                <h3 class="mt-4">151 KT</h3>
                 <div class="progress mt-4" style="height: 4px">
                   <div
                     class="progress-bar bg-warning"
@@ -104,7 +104,7 @@
             </div>
           </div>
 
-          <div class="col-sm-6 col-xl-3">
+          <div class="col-sm-4 col-xl-3">
             <div class="card">
               <div class="card-heading p-4">
                 <div class="mini-stat-icon float-right">
