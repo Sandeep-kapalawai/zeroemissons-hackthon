@@ -22,6 +22,10 @@
         </div>
         <!-- end page-title -->
         <div class="font-20 center padding-1">Terminal Summary</div>
+        <div class="font-15 center">Status:</div>
+        <div class="meter animate">
+          <span style="width: 30%"><span></span></span>
+        </div>
         <div class="row">
           <div class="col-sm-12 col-xl-4">
             <div class="card">
@@ -672,3 +676,70 @@
     },
   };
 </script>
+
+<style scoped>
+  .meter {
+    box-sizing: content-box;
+    width: 30%;
+    height: 10px; /* Can be anything */
+    position: relative;
+    margin: 10px 0 20px 0; /* Just for demo spacing */
+    background: #9f8772;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: inset 0 -1px 1px rgba(102, 41, 23, 0.062);
+  }
+
+  .meter > span:after,
+  .animate > span > span {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      transparent 75%,
+      transparent
+    );
+    z-index: 1;
+    background-size: 50px 50px;
+    animation: move 2s linear infinite;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+  }
+
+  .animate > span:after {
+    display: none;
+  }
+
+  @keyframes move {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 50px 50px;
+    }
+  }
+
+  .orange > span {
+    background-image: linear-gradient(#f1a165, #f36d0a);
+  }
+
+  .red > span {
+    background-image: linear-gradient(#f0a3a3, #f42323);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+</style>
