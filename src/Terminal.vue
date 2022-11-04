@@ -322,6 +322,14 @@
               "ALR",
             ],
           },
+          yaxis: {
+            categories: [30, 10, 45, 50, 10, 20, 40, 91],
+            labels: {
+              formatter: (val) => {
+                return val + "K";
+              },
+            },
+          },
         },
         series2: [
           {
