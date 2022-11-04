@@ -32,7 +32,7 @@
                 <div>
                   <h5 class="font-16">Total Yearly Diesel Consumption</h5>
                 </div>
-                <h3 class="mt-4">5.8 million litres</h3>
+                <h3 class="mt-4">5.8 Million Litres</h3>
                 <div class="progress mt-4" style="height: 4px">
                   <div
                     class="progress-bar bg-primary"
@@ -319,7 +319,7 @@
                         <th scope="col"></th>
                         <th scope="col">Count</th>
 
-                        <th scope="col">Location</th>
+                        <th scope="col">Suppliers</th>
                         <th scope="col" colspan="2">
                           Zero Emission Recommendation
                         </th>
@@ -335,14 +335,17 @@
                           <div class="circle-brown"></div>
                         </td>
                         <td>10</td>
-
-                        <td>India</td>
                         <td>
                           <button
                             type="button"
-                            class="btn btn-l btn-primary"
-                            @click="selectedView"
+                            class="btn btn-l btn-secondary"
+                            @click="show = true"
                           >
+                            List
+                          </button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-l btn-primary">
                             View
                           </button>
                         </td>
@@ -357,9 +360,17 @@
                         </td>
                         <td>36</td>
 
-                        <td>India</td>
                         <td>
-                          <button type="button" class="btn btn-l btn-primary">
+                          <button type="button" class="btn btn-l btn-secondary">
+                            List
+                          </button>
+                        </td>
+                        <td>
+                          <button
+                            type="button"
+                            class="btn btn-l btn-primary"
+                            @click="selectedView"
+                          >
                             View
                           </button>
                         </td>
@@ -374,7 +385,11 @@
                         </td>
                         <td>126</td>
 
-                        <td>India</td>
+                        <td>
+                          <button type="button" class="btn btn-l btn-secondary">
+                            List
+                          </button>
+                        </td>
                         <td>
                           <button type="button" class="btn btn-l btn-primary">
                             View
@@ -439,15 +454,31 @@
       </div>
       <!-- container-fluid -->
     </div>
+    <vue-final-modal
+      v-model="show"
+      classes="modal-container"
+      content-class="modal-content"
+    >
+      <DashboardTerminalAssetsQC />
+
+      <button class="modal-close" @click="show = false">x</button>
+    </vue-final-modal>
     <!-- content -->
     <!-- <checkbox-svg-map v-model="selectedLocations" :map="Taiwan" /> -->
     <footer class="footer">
-      ©2022 Maersk Hackathon
-      <span class="d-none d-sm-inline-block">
-        <span>- Made with </span>Love <i class="mdi mdi-heart text-danger"></i
-      ></span>
+      <div>
+        Disclaimer: The information provided is not the real data, its for
+        visual purpose
+      </div>
+      <div>
+        ©2022 Maersk Hackathon
+        <span class="d-none d-sm-inline-block">
+          <span>- Made with </span>Love <i class="mdi mdi-heart text-danger"></i
+        ></span>
+      </div>
     </footer>
   </div>
+
   <!-- ============================================================== -->
   <!-- End Right content here -->
   <!-- ============================================================== -->
@@ -455,9 +486,9 @@
 <script>
   import VueApexCharts from "vue3-apexcharts";
   // import SparklineGraph from "./SparklineGraph.vue";
-  import "vue-awesome/icons";
+  import { VueFinalModal } from "vue-final-modal";
 
-  // import Icon from "vue-awesome/components/Icon";
+  import DashboardTerminalAssetsQC from "./DashboardTerminalAssetsQC.vue";
 
   export default {
     name: "Dashboard",
@@ -466,11 +497,14 @@
     },
     components: {
       apexcharts: VueApexCharts,
+      VueFinalModal,
+      DashboardTerminalAssetsQC,
     },
     data: function () {
       return {
         fimsuggestionSelected: "",
         selectedOption: "",
+        show: false,
         chartOptions: {
           chart: {
             id: "basic-bar",
@@ -638,35 +672,42 @@
               fontSize: "14px",
               fontWeight: "bold",
               fontFamily: undefined,
-              color: "#263238",
+              color: "#FFF",
             },
           },
 
-          colors: ["#2E93fA"],
           style: {
             fontSize: "14px",
             fontFamily: "Helvetica, Arial, sans-serif",
             fontWeight: "bold",
-            colors: "#2E93fA",
+            color: "#FFFF",
           },
           chart: {
             type: "bar",
             height: "auto",
             width: "10%",
             stacked: true,
-            // foreColor: "#FFFFFF",
-            background: "#fff",
+            foreColor: "#FFFFFF",
+            // background: "#fff",
           },
           plotOptions: {
             bar: {
               horizontal: true,
               dataLabels: {
-                total: {
+                enabled: true,
+                dropShadow: {
                   enabled: true,
+                  left: 2,
+                  top: 2,
+                  opacity: 0.5,
+                },
+                total: {
+                  enabled: false,
                   offsetX: 0,
                   style: {
                     fontSize: "13px",
                     fontWeight: 900,
+                    color: "#fffff",
                   },
                 },
               },
@@ -737,15 +778,15 @@
             height: "auto",
             width: "10%",
             stacked: true,
-            // foreColor: "#FFFFFF",
-            background: "#fff",
+            foreColor: "#FFFFFF",
+            // background: "#fff",
           },
           plotOptions: {
             bar: {
               horizontal: true,
               dataLabels: {
                 total: {
-                  enabled: true,
+                  enabled: false,
                   offsetX: 0,
                   style: {
                     fontSize: "13px",
@@ -810,56 +851,20 @@
           {
             data: [
               {
-                x: "New Delhi",
-                y: 218,
+                x: "Hybridzation",
+                y: 40,
               },
               {
-                x: "Kolkata",
+                x: "Electrify",
                 y: 149,
               },
               {
-                x: "Mumbai",
-                y: 184,
-              },
-              {
-                x: "Ahmedabad",
-                y: 55,
-              },
-              {
-                x: "Bangaluru",
-                y: 84,
-              },
-              {
-                x: "Pune",
-                y: 31,
-              },
-              {
-                x: "Chennai",
+                x: "Load Balance",
                 y: 70,
               },
               {
-                x: "Jaipur",
-                y: 30,
-              },
-              {
-                x: "Surat",
-                y: 44,
-              },
-              {
-                x: "Hyderabad",
-                y: 68,
-              },
-              {
-                x: "Lucknow",
-                y: 28,
-              },
-              {
-                x: "Indore",
-                y: 19,
-              },
-              {
-                x: "Kanpur",
-                y: 29,
+                x: "Replace",
+                y: 55,
               },
             ],
           },
@@ -990,3 +995,35 @@
     },
   };
 </script>
+<style>
+  .modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-content {
+    position: relative;
+    width: 70% !important;
+    height: auto;
+
+    padding: 20px;
+    overflow: auto;
+    background-color: #3a3e5c !important;
+    border-radius: 7px;
+  }
+  .modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    margin: 8px 8px 0 0;
+    cursor: pointer;
+  }
+  .modal-close::hover {
+    color: rgb(71, 68, 68);
+  }
+</style>

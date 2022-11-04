@@ -2,146 +2,20 @@
   <!-- ============================================================== -->
   <!-- Start right Content here -->
   <!-- ============================================================== -->
-  <div class="content-page">
+  <div>
     <!-- Start content -->
     <div class="content">
       <div class="container-fluid">
-        <div class="page-title-box">
-          <div class="row align-items-center">
-            <div class="col-sm-6">
-              <h4 class="page-title">{{ msg }}</h4>
-            </div>
-            <!-- <div class="col-sm-6">
-              <ol class="breadcrumb float-right">
-                <li class="breadcrumb-item"><a href="#"></a></li>
-                <li class="breadcrumb-item active">Dashboard</li>
-              </ol>
-            </div> -->
-          </div>
-          <!-- end row -->
-        </div>
         <!-- end page-title -->
-
-        <!-- <div class="row">
-          <div class="col-sm-6 col-xl-3">
-            <div class="card">
-              <div class="card-heading p-4">
-                <div class="mini-stat-icon float-right">
-                  <i class="mdi mdi-cube-outline bg-primary text-white"></i>
-                </div>
-                <div>
-                  <h5 class="font-16">Total Yearly Electricity Consumption</h5>
-                </div>
-                <h3 class="mt-4">17M KWH</h3>
-                <div class="progress mt-4" style="height: 4px">
-                  <div
-                    class="progress-bar bg-primary"
-                    role="progressbar"
-                    style="width: 5%"
-                    aria-valuenow="75"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-                <p class="text-muted mt-2 mb-0">
-                  Reduced by <span class="float-right">5%</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-xl-3">
-            <div class="card">
-              <div class="card-heading p-4">
-                <div class="mini-stat-icon float-right">
-                  <i class="mdi mdi-briefcase-check bg-success text-white"></i>
-                </div>
-                <div>
-                  <h5 class="font-16">Green Energy Score</h5>
-                </div>
-                <h3 class="mt-4">80/100</h3>
-                <div class="progress mt-4" style="height: 4px">
-                  <div
-                    class="progress-bar bg-success"
-                    role="progressbar"
-                    style="width: 5%"
-                    aria-valuenow="88"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-                <p class="text-muted mt-2 mb-0">
-                  Improved by<span class="float-right">5%</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-xl-3">
-            <div class="card">
-              <div class="card-heading p-4">
-                <div class="mini-stat-icon float-right">
-                  <i class="mdi mdi-tag-text-outline bg-warning text-white"></i>
-                </div>
-                <div>
-                  <h5 class="font-16">Total Yearly C0<sup>2</sup> Emission</h5>
-                </div>
-                <h3 class="mt-4">200 MILLION TONNES</h3>
-                <div class="progress mt-4" style="height: 4px">
-                  <div
-                    class="progress-bar bg-warning"
-                    role="progressbar"
-                    style="width: 15%"
-                    aria-valuenow="68"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-                <p class="text-muted mt-2 mb-0">
-                  Reduced by <span class="float-right">15%</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-xl-3">
-            <div class="card">
-              <div class="card-heading p-4">
-                <div class="mini-stat-icon float-right">
-                  <i class="mdi mdi-buffer bg-danger text-white"></i>
-                </div>
-                <div>
-                  <h5 class="font-16">Zero Emission Initiatives</h5>
-                </div>
-                <h3 class="mt-4">3</h3>
-                <div class="progress mt-4" style="height: 4px">
-                  <div
-                    class="progress-bar bg-danger"
-                    role="progressbar"
-                    style="width: 10%"
-                    aria-valuenow="82"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-                <p class="text-muted mt-2 mb-0">
-                  Improved by <span class="float-right">30%</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> -->
 
         <!-- end row -->
 
         <!-- START ROW -->
-        <div class="row">
+        <div class="row qc-container">
           <div class="col-xl-12">
             <div class="card m-b-30">
               <div class="card-body">
-                <h4 class="mt-0 header-title mb-4">
-                  Asset Performance (Emissions)
-                </h4>
+                <h4 class="mt-0 header-title mb-4">Supplier Emission Status</h4>
                 <div class="table-responsive">
                   <table class="table table-hover">
                     <thead>
@@ -163,13 +37,6 @@
                             target="_blank"
                             >Kalmar</a
                           >
-                          <button
-                            type="button"
-                            class="btn btn-sm btn-primary"
-                            @click="renderModal"
-                          >
-                            Primary button
-                          </button>
                         </td>
                         <td>
                           <span>21,300</span>
@@ -249,14 +116,6 @@
       </div>
       <!-- container-fluid -->
     </div>
-    <!-- content -->
-    <!-- <checkbox-svg-map v-model="selectedLocations" :map="Taiwan" /> -->
-    <footer class="footer">
-      ©2022 Maersk Hackathon
-      <span class="d-none d-sm-inline-block">
-        <span>- Made with </span>Love <i class="mdi mdi-heart text-danger"></i
-      ></span>
-    </footer>
   </div>
   <!-- ============================================================== -->
   <!-- End Right content here -->

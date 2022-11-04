@@ -826,7 +826,7 @@
     <!-- ============================================================== -->
     <!-- Start right Content here -->
     <!-- ============================================================== -->
-    <Homepage :msg="selected" v-if="selected === '' || selected === 'Maersk'" />
+    <Homepage v-if="selected === '' || selected === 'Maersk'" />
     <Dashboard :msg="selected" v-if="selected === 'TERMINAL > GTI'" />
     <DashboardTerminalPPVSTSvue
       :msg="selected"

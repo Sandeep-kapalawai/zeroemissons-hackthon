@@ -86,7 +86,7 @@
                 <div>
                   <h5 class="font-16">Total Yearly C0<sup>2</sup> Emission</h5>
                 </div>
-                <h3 class="mt-4">200 MILLION TONNES</h3>
+                <h3 class="mt-4">200M TONNES</h3>
                 <div class="progress mt-4" style="height: 4px">
                   <div
                     class="progress-bar bg-warning"
@@ -157,7 +157,7 @@
                 <apexcharts
                   type="bar"
                   height="350"
-                  :options="chartOptionsstacked"
+                  :options="chartOptionsstackedfuel"
                   :series="seriesstackedfuel"
                 />
                 <!-- <div
@@ -420,10 +420,16 @@
     <!-- content -->
     <!-- <checkbox-svg-map v-model="selectedLocations" :map="Taiwan" /> -->
     <footer class="footer">
-      ©2022 Maersk Hackathon
-      <span class="d-none d-sm-inline-block">
-        <span>- Made with </span>Love <i class="mdi mdi-heart text-danger"></i
-      ></span>
+      <div>
+        Disclaimer: The information provided is not the real data, its for
+        visual purpose
+      </div>
+      <div>
+        ©2022 Maersk Hackathon
+        <span class="d-none d-sm-inline-block">
+          <span>- Made with </span>Love <i class="mdi mdi-heart text-danger"></i
+        ></span>
+      </div>
     </footer>
   </div>
   <!-- ============================================================== -->
@@ -605,7 +611,7 @@
         ],
         chartOptionsstacked: {
           title: {
-            text: "Diesel Consumption(Litres)",
+            text: "",
             align: "left",
             margin: 10,
             offsetX: 0,
@@ -615,7 +621,7 @@
               fontSize: "14px",
               fontWeight: "bold",
               fontFamily: undefined,
-              color: "#263238",
+              // color: "#263238",
             },
           },
 
@@ -631,15 +637,14 @@
             height: "auto",
             width: "10%",
             stacked: true,
-            // foreColor: "#FFFFFF",
-            background: "#fff",
+            foreColor: "#FFFFFF",
+            // background: "#fff",
           },
           plotOptions: {
             bar: {
               horizontal: true,
               dataLabels: {
                 total: {
-                  enabled: true,
                   offsetX: 0,
                   style: {
                     fontSize: "13px",
@@ -698,7 +703,7 @@
               fontSize: "14px",
               fontWeight: "bold",
               fontFamily: undefined,
-              color: "#263238",
+              color: "#FFF",
             },
           },
 
@@ -707,22 +712,22 @@
             fontSize: "14px",
             fontFamily: "Helvetica, Arial, sans-serif",
             fontWeight: "bold",
-            colors: "#2E93fA",
+            // colors: "#2E93fA",
           },
           chart: {
             type: "bar",
             height: "auto",
             width: "10%",
             stacked: true,
-            // foreColor: "#FFFFFF",
-            background: "#fff",
+            foreColor: "#FFFFFF",
+            // background: "#fff",
           },
           plotOptions: {
             bar: {
               horizontal: true,
               dataLabels: {
                 total: {
-                  enabled: true,
+                  // enabled: true,
                   offsetX: 0,
                   style: {
                     fontSize: "13px",

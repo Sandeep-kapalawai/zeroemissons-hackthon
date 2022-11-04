@@ -265,10 +265,16 @@
     <!-- content -->
     <!-- <checkbox-svg-map v-model="selectedLocations" :map="Taiwan" /> -->
     <footer class="footer">
-      ©2022 Maersk Hackathon
-      <span class="d-none d-sm-inline-block">
-        <span>- Made with </span>Love <i class="mdi mdi-heart text-danger"></i
-      ></span>
+      <div>
+        Disclaimer: The information provided is not the real data, its for
+        visual purpose
+      </div>
+      <div>
+        ©2022 Maersk Hackathon
+        <span class="d-none d-sm-inline-block">
+          <span>- Made with </span>Love <i class="mdi mdi-heart text-danger"></i
+        ></span>
+      </div>
     </footer>
   </div>
   <!-- ============================================================== -->
